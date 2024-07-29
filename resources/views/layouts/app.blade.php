@@ -30,7 +30,7 @@
   @endif
 
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/ico" href="../assets/img/AksesKu.ico">
+  <link rel="icon" type="image/ico" href="../assets/img/telkomakses.png">
   <title>
     AksesKu | Telkom Akses Kedaton
   </title>
