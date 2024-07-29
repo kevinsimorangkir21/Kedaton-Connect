@@ -9,9 +9,9 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's WO</p>
                 <h5 class="font-weight-bolder mb-0">
-                  $53,000
+                  17
                   <span class="text-success text-sm font-weight-bolder">+55%</span>
                 </h5>
               </div>
@@ -100,7 +100,7 @@
             <div class="col-lg-6">
               <div class="d-flex flex-column h-100">
                 <p class="mb-1 pt-2 text-bold">Built by developers</p>
-                <h5 class="font-weight-bolder">Telkom Akses Dashboard</h5>
+                <h5 class="font-weight-bolder">Telkom Akses  Dashboard</h5>
                 <p class="mb-5">From colors, cards, typography to complex elements, you will find the full documentation.</p>
                 <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
                   Read More
