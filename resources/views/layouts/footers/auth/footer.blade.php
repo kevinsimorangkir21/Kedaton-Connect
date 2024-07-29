@@ -14,9 +14,6 @@
                     <li class="nav-item">
                         <a href="https://www.telkom.co.id/sites" class="nav-link text-muted" target="_blank">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="https://creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-                    </li>
                 </ul>
             </div>
         </div>
