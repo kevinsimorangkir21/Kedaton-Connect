@@ -13,7 +13,7 @@
                         <div>
                             <h5 class="mb-0">All Users</h5>
                         </div>
-                        <a href="#" class="btn bg-gradient-primary btn-sm mb-0" type="button">+&nbsp; New User</a>
+                        <a href="/tambahuser" class="btn bg-gradient-primary btn-sm mb-0" type="button">+&nbsp; Tambah</a>
                     </div>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
@@ -58,7 +58,7 @@
                                         <p class="text-xs font-weight-bold mb-0">Admin</p>
                                     </td>
                                     <td class="text-center">
-                                        <p class="text-xs font-weight-bold mb-0">admin@softui.com</p>
+                                        <p class="text-xs font-weight-bold mb-0">admin@telkom.com</p>
                                     </td>
                                     <td class="text-center">
                                         <p class="text-xs font-weight-bold mb-0">Admin</p>
