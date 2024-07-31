@@ -43,7 +43,6 @@ class DataUserController extends Controller
             'email' => 'required|string|email|max:255|unique:users', // Validasi email yang benar dan unik
             'password' => 'required|string|min:8',
         ]);
-        
         User::create([
         'name'=>$request->name,
         'email'=>$request->email,
@@ -54,7 +53,11 @@ class DataUserController extends Controller
 
     public function deleteuser($id) {
         $data = User::find($id);
-        $data->delete();
-        return redirect()->route('profile')->with('success', 'berhasil dihapus');
+        if ($data) {
+            $data->delete();
+            return redirect()->route('profile')->with('success', 'User berhasil dihapus');
+        }
+        return redirect()->route('profile')->with('error', 'User tidak ditemukan');
     }
+    
 }
