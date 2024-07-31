@@ -64,7 +64,10 @@ Route::group(['middleware' => 'auth'], function () {
 	})->name('sign-up');
 
 	Route::get('/area-chart', [AreaChartController::class, 'areaChart']);
-	Route::get('/profile', [DataUserController::class, 'index']);
+	Route::get('/profile', [DataUserController::class, 'index'])->name('profile');
+	Route::get('/tambahuser', [DataUserController::class, 'tambahuser'])->name('tambahuser');
+	Route::post('/insertuser', [DataUserController::class, 'insertuser'])->name('insertuser');
+	Route::delete('/deleteuser/{id}', [DataUserController::class, 'deleteuser'])->name('deleteuser');
 
     Route::get('/logout', [SessionsController::class, 'destroy']);
 	Route::get('/user-profile', [InfoUserController::class, 'create']);

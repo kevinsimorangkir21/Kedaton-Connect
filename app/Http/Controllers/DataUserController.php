@@ -32,13 +32,24 @@ class DataUserController extends Controller
     }
 
 
+    public function tambahuser()
+    {
+        return view('/tambahuser');
+    }
     public function insertuser(Request $request)
     {
-        User::create(['name'=>$request->name,
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users', // Validasi email yang benar dan unik
+            'password' => 'required|string|min:8',
+        ]);
+        
+        User::create([
+        'name'=>$request->name,
         'email'=>$request->email,
-        'password'=>$request->password
+        'password' => bcrypt($request->password), // Hash password sebelum menyimpan
     ]);
-        return redirect()->route('profile');
+        return redirect()->route('profile')->with('success', 'User berhasil ditambahkan.');
     }
 
     public function deleteuser($id) {
