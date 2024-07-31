@@ -12,7 +12,7 @@
                 <div class="card-header pb-0 text-left bg-transparent">
                   <h3 class="font-weight-bolder text-info text-gradient">Welcome back</h3>
                   <p class="mb-0">Create a new acount<br></p>
-                  <p class="mb-0">OR Sign in with your account</p>
+                  <p class="mb-0">Or Sign in with your account</p>
                 </div>
                 <div class="card-body">
                   <form role="form" method="POST" action="/session">
@@ -26,7 +26,7 @@
                     </div>
                     <label>Password</label>
                     <div class="mb-3">
-                      <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="secret" aria-label="Password" aria-describedby="password-addon">
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="telkomakses" aria-label="Password" aria-describedby="password-addon">
                       @error('password')
                         <p class="text-danger text-xs mt-2">{{ $message }}</p>
                       @enderror
