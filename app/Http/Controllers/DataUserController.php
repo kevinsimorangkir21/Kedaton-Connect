@@ -56,8 +56,9 @@ class DataUserController extends Controller
         if ($data) {
             $data->delete();
             return redirect()->route('profile')->with('success', 'User berhasil dihapus');
-        }
+        } else {
         return redirect()->route('profile')->with('error', 'User tidak ditemukan');
+        }
     }
     
 }
