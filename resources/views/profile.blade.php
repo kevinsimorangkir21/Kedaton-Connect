@@ -90,7 +90,7 @@
                                             <th scope="col">#</th>
                                             <th scope="col">Nama</th>
                                             <th scope="col">Email</th>
-                                            <th scope="col">Role</th>
+                                            <th scope="col">Unit</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
@@ -102,7 +102,7 @@
                                             <th scope="row">{{ $nom++ }}</th>
                                             <td>{{ $user->name }}</td>
                                             <td>{{ $user->email }}</td>
-                                            <td>{{ $user->role }}</td>
+                                            <td>{{ $user->location }}</td>
                                             <td> 
                                             <!-- Delete button -->  
                                             <form action="{{ route('deleteuser', $user->id) }}" method="POST" style="display: inline;">

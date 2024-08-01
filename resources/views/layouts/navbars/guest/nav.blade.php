@@ -33,12 +33,6 @@
             Sign Up
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link me-2" href="{{ auth()->user() ? url('static-sign-in') : url('login') }}">
-            <i class="fas fa-key opacity-6 me-1 {{ (Request::is('static-sign-up') ? '' : 'text-dark') }}"></i>
-            Sign In
-          </a>
-        </li>
       </ul>
       <ul class="navbar-nav d-lg-block d-none">
       </ul>
