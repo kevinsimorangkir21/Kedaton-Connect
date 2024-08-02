@@ -12,7 +12,7 @@
       </span>
     </button>
     <div class="collapse navbar-collapse" id="navigation">
-      <ul class="navbar-nav mx-auto">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         @if (auth()->user())
             <li class="nav-item">
             <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="{{ url('dashboard') }}">
@@ -27,14 +27,14 @@
             </a>
             </li>
         @endif
+      </ul>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link me-2" href="{{ auth()->user() ? url('static-sign-up') : url('register') }}">
-            <i class="fas fa-user-circle opacity-6 me-1 {{ (Request::is('static-sign-up') ? '' : 'text-dark') }}"></i>
+            <i class="fas fa-user-plus opacity-6 me-1 {{ (Request::is('static-sign-up') ? '' : 'text-dark') }}"></i>
             Sign Up
           </a>
         </li>
-      </ul>
-      <ul class="navbar-nav d-lg-block d-none">
       </ul>
     </div>
   </div>

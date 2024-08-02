@@ -28,7 +28,7 @@
             <div class="nav-wrapper position-relative end-0">
               <ul class="nav nav-pills nav-fill p-1 bg-transparent" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link mb-0 px-0 py-1 active " data-bs-toggle="tab" href="javascript:;" role="tab" aria-selected="true">
+                  <!-- <a class="nav-link mb-0 px-0 py-1 active " data-bs-toggle="tab" href="javascript:;" role="tab" aria-selected="true">
                     <svg class="text-dark" width="16px" height="16px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -44,10 +44,10 @@
                       </g>
                     </svg>
                     <span class="ms-1">App</span>
-                  </a>
+                  </a> -->
                 </li>
                 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" href="javascript:;" role="tab" aria-selected="false">
                     <svg class="text-dark" width="16px" height="16px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <title>settings</title>
@@ -67,7 +67,7 @@
                     </svg>
                     <span class="ms-1">Settings</span>
                   </a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -78,45 +78,46 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Data Users</h4>
-                            </div>
-                            <div class="card-body">
-                            <a href="/tambahuser" class="btn bg-gradient-primary btn-sm mb-0" type="button">+&nbsp; Tambah</a>
-                                <table class="table mt-4">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Nama</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Unit</th>
-                                            <th scope="col">Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    @php
-                                        $nom = 1; 
-                                    @endphp
-                                    @foreach ($data as $user)
-                                        <tr>
-                                            <th scope="row">{{ $nom++ }}</th>
-                                            <td>{{ $user->name }}</td>
-                                            <td>{{ $user->email }}</td>
-                                            <td>{{ $user->location }}</td>
-                                            <td> 
-                                            <!-- Delete button -->  
-                                            <form action="{{ route('deleteuser', $user->id) }}" method="POST" style="display: inline;">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus user ini?')">Hapus</button>
-                                            </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
-                                </table>
+                                  <div class="card mb-4 mx-4">
+          <div class="d-flex flex-row justify-content-between align-items-center">
+            <div class="card-header pb-0">
+              <h5 class="mb-0">Data Users</h5>
+            </div>
+            <a href="/tambahuser" class="btn bg-gradient-primary btn-sm mb-0" type="button">+&nbsp; Tambah</a>
+          </div>
+          <div class="card-body">
+            <table class="table mt-4">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Email</th>
+      <th scope="col">Unit</th>
+      <th scope="col">Aksi</th>
+    </tr>
+  </thead>
+  @php
+    $nom = 1; 
+  @endphp
+  @foreach ($data as $user)
+    <tr>
+      <td class="text-center">{{ $nom++ }}</td>
+      <td>{{ $user->name }}</td>
+      <td>{{ $user->email }}</td>
+      <td>{{ $user->unit = 'Kedaton' }}</td>
+      <td>
+        <!-- Delete button -->  
+        <form action="{{ route('deleteuser', $user->id) }}" method="POST" style="display: inline;">
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus user ini?')">Hapus</button>
+        </form>
+      </td>
+    </tr>
+  @endforeach
+</table>
+          </div>
         </div>
-      </div>
       @include('layouts.footers.auth.footer')
     </div>
   </div>
