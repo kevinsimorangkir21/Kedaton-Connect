@@ -8,6 +8,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\AreaChartController;
+use App\Http\Controllers\ChartController;
+use App\Http\Controllers\hsi2023Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
@@ -68,6 +70,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/tambahuser', [DataUserController::class, 'tambahuser'])->name('tambahuser');
 	Route::post('/insertuser', [DataUserController::class, 'insertuser'])->name('insertuser');
 	Route::delete('/deleteuser/{id}', [DataUserController::class, 'deleteuser'])->name('deleteuser');
+	Route::get('/user-teams', [DataUserController::class, 'getTeams'])->name('user.teams');
+
+	Route::get('/chart-data', [ChartController::class, 'getData']);
+	Route::get('/dashboard', [hsi2023Controller::class, 'index'])->name('dashboard');
 
     Route::get('/logout', [SessionsController::class, 'destroy']);
 	Route::get('/user-profile', [InfoUserController::class, 'create']);
