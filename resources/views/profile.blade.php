@@ -104,7 +104,7 @@
       <td class="text-center">{{ $nom++ }}</td>
       <td>{{ $user->name }}</td>
       <td>{{ $user->email }}</td>
-      <td>{{ $user->unit = 'Kedaton' }}</td>
+      <td>{{ $user->location }}</td>
       <td>
         <!-- Delete button -->  
         <form action="{{ route('deleteuser', $user->id) }}" method="POST" style="display: inline;">
