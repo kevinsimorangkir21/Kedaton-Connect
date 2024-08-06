@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 data: window.propertyData,
                 responsive: true,
                 scrollX: true,
-                scrollY: 600,
-                lengthMenu: [[15, 20, 50, 100], [15, 20, 50, 100]],
+                scrollY: 400,  // Sesuaikan dengan tinggi yang diinginkan
+                pageLength: 15, // Menampilkan hanya 9 baris per halaman
+                lengthMenu: [[15, 20, 50, 100], [15, 20, 50, 100]], // Menu panjang halaman
+                order: [[0, 'desc']], // Urutkan berdasarkan kolom 'id' secara descending
                 columns: [
                     { data: 'BULAN' },
                     { data: 'NAMA' },
@@ -19,5 +21,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 ]
             });
         })
-        
+        .catch((error) => console.error("Error fetching data:", error));
 });

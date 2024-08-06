@@ -1,0 +1,152 @@
+
+
+/* --------------------- Main Content ------------------------ */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 13px;
+    column-gap: 20px;
+}
+
+.pieavg {
+    padding: 10px 30px 10px 20px;
+}
+
+.tabel {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+
+.tabelrec {
+    padding: 10px;
+    overflow: auto;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+
+#data-tabel{
+    font-size: 14px;
+}
+
+table th {
+    position: sticky;
+    top : 0;
+    background-color:#4B93FF;
+    color: #FFE713;
+    font-size: 15px;
+    overflow: hidden;
+    word-wrap:break-word;    
+}
+
+table td{
+    overflow: hidden;
+    word-wrap:break-word;
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details > li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+table.dataTable>tbody>tr.child ul.dtr-details > li.dtr-title{
+    font-weight: 300;
+}
+
+
+/*-------- mobile ------*/
+@media (max-width: 767px) {
+
+    .table-icon{
+        width: 23px;
+        margin: 0px;
+    }
+
+    main {
+        padding: 0px 12px 0px 12px;
+    }
+
+    .grid-container {
+        display: grid;
+        row-gap: 60px;
+        column-gap: 0;
+        justify-content: center;
+    }
+
+    .tabel {
+        grid-column: span 4;
+        min-width: 363px;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .tabelrec {
+        padding: 5px;
+    }
+
+    table th {
+        font-size: 13px;
+    }
+
+    #data-tabel{
+        font-size: 12px;
+    }
+
+    #data-tabel_wrapper > .dt-layout-row{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 60px
+    }
+
+    .dt-search{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #data-tabel_wrapper label[for="dt-length-0"]{
+        display: none;
+    }
+}
+
+/*-------- mobile tablet ------*/
+@media (min-width: 768px) and (max-width: 1199px) {
+    
+    .grid-container {
+        row-gap: 50px;
+    }
+
+    .tabel {
+        grid-column: span 4;
+        grid-row: span 2;
+        padding: 30px;
+    }
+
+    .tabel_header {
+        font-size: 18px;
+    }
+
+    .tabelrec {
+        padding: 0px 25px 0px 25px;
+        min-height: 350px;
+        background-color: white;
+        overflow: auto;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    table th {
+        font-size: 17px;
+    }
+
+    #data-tabel {
+        font-size: 15px;
+    }
+}

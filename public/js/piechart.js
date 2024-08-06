@@ -1,24 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('json/hsi2024.json')
-        .then((response) => response.json())
-        .then((data) => {
-            console.log("Data fetched:", data); // Debugging line
-            window.jumlahData = data;
-            createPieChart();
-        })
-        .catch((error) => console.error("Error fetching data:", error)); // Debugging line
-});
+fetch('json/hsi2024.json')
+    .then((response) => response.json())
+    .then((data) => {
+        window.jumlahData = data;
+        createPieChart();
+    });
 
 function createPieChart() {
     const ctx = document.getElementById('piechart-area').getContext('2d');
-    if (!ctx) {
-        console.error("Canvas element not found!"); // Debugging line
-        return;
-    }
-
-    // Define areas and areaCounts
     const areas = ["METRO", "INNER", "PRINGSEWU"];
-    let areaCounts = { "METRO": 0, "INNER": 0, "PRINGSEWU": 0 };
+    let areaCounts = {
+        "METRO": 0,
+        "INNER": 0,
+        "PRINGSEWU": 0
+    };
 
     window.jumlahData.forEach(entry => {
         if (areas.includes(entry.AREA)) {
@@ -65,13 +59,13 @@ function createPieChart() {
                     },
                     font: {
                         weight: 'bold',
-                        size: 14
+                        size: 11
                     },
                     anchor: 'end',
                     align: 'start'
                 }
             }
         },
-
+        plugins: [ChartDataLabels]
     });
 }

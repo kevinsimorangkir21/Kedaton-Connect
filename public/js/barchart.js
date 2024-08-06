@@ -64,7 +64,9 @@ function createBarChart() {
                 data: jumlahPerBulan,
                 backgroundColor: backgroundColors,
                 borderColor: borderColors,
-                borderWidth: 1
+                borderWidth: 0,
+                borderRadius: 3,
+                borderSkipped: false
             }]
         },
         options: {

@@ -1,0 +1,104 @@
+/* General styles for table container */
+.tabelrec {
+    padding: 10px;
+    overflow: auto;
+}
+
+#data-tabel_wrapper {
+    overflow: hidden; /* Menyembunyikan overflow wrapper jika ada */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    table-layout: fixed;
+    overflow-x: auto;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 13px;
+    column-gap: 20px;
+}
+/* Data table specific styles */
+#data-tabel {
+    font-size: 14px;
+}
+
+/* Table header styles */
+table th {
+    position: sticky;
+    top: 0;
+    background-color: #c206b8;
+    color: #FFE713;
+    font-size: 15px;
+    overflow: hidden;
+    word-wrap: break-word;    
+}
+
+/* Table cell styles */
+table td {
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/* Data table child row details */
+table.dataTable > tbody > tr.child ul.dtr-details > li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details > li.dtr-title {
+    font-weight: 300;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 767px) {
+    .tabel {
+        grid-column: span 4;
+        min-width: 363px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tabelrec {
+        padding: 5px;
+    }
+
+    table th {
+        font-size: 13px;
+    }
+
+    #data-tabel {
+        font-size: 12px;
+    }
+}
+
+/* Responsive styles for tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .tabel {
+        grid-column: span 4;
+        grid-row: span 2;
+        padding: 30px;
+    }
+
+    .tabelrec {
+        padding: 0 25px;
+        min-height: 350px;
+        background-color: white;
+        overflow: auto;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    table th {
+        font-size: 17px;
+    }
+
+    #data-tabel {
+        font-size: 15px;
+    }
+}

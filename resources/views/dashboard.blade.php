@@ -14,30 +14,32 @@
         <script src="js/barchart.js" type="text/javascript"></script>
 </div>
 
+<div class="grid-container">
 <div class="piechart2">
       <h4>Jumlah Area 2024</h4>
       <div class= "pietotal" >
-         <canvas id="piechart-area" width="200" height="200"></canvas>
+         <canvas id="piechart-area" width="230" height="230"></canvas>
       </div>
       <script src="js/piechart.js"></script> 
 </div>
 
 <div class="tabel">
     <div class="tabelrec">
-      <table id="data-tabel">
-          <thead>
-            <tr>
-              <th><p>BULAN</p></th>
-              <th><p>NAMA</p></th>
-              <th><p>STO</p></th>
-              <th><p>KETERANGAN</p></th>
-              <th><p>MITRA</p></th>
-              <th><p>AREA</p></th>
-            </tr>
-          </thead>
-      </table>
-    <script src="js/tabel.js"></script>           
-  </div>
+        <table id="data-tabel" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>BULAN</th>
+                    <th>NAMA</th>
+                    <th>STO</th>
+                    <th>KETERANGAN</th>
+                    <th>MITRA</th>
+                    <th>AREA</th>
+                </tr>
+            </thead>
+        </table>
+        <script src="{{ asset('js/tabel.js') }}"></script>           
+    </div>
+</div>
 </div>
 
 <div class="datel-filter">
@@ -49,7 +51,7 @@
     </select>
 </div>
 
-  <div class="row">
+  <div class="row mt-4">
   <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
@@ -139,7 +141,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mt-4">
   <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
@@ -183,7 +185,7 @@
               <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
             </div>
           </div>
-          <h6 class="ms-2 mt-4 mb-0"> Active Users </h6>
+          <!-- <h6 class="ms-2 mt-4 mb-0"> Active Users </h6>
           <p class="text-sm ms-2"> (<span class="font-weight-bolder">+23%</span>) than last week </p>
           <div class="container border-radius-lg">
             <div class="row">
@@ -287,7 +289,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> !-->
         </div>
       </div>
     </div>
