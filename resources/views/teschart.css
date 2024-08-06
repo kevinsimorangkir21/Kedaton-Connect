@@ -1,0 +1,690 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* --------- Navbar --------- */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 43px 11px 0px ;
+    background-color: #109BFF;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.acc-icon-container{
+    display: flex;
+    justify-content: center;
+}
+
+.account-icon{
+    width: 55px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style-type: none;
+}
+
+.pie-chart-icon{
+    width: 40px;
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+
+.line-totalprop-chart-icon,
+.line-totalvsavg-chart-icon,
+.bar-yrbuild-chart-icon{
+    width: 35px;
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+.pie-chart-icon:hover,
+.line-totalprop-chart-icon:hover,
+.line-totalvsavg-chart-icon:hover,
+.bar-yrbuild-chart-icon:hover{
+    transform: scale(1.2);
+}
+
+/* --------- Header and Filter button --------- */
+header{
+    padding: 30px 0px 30px 150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #4B93FF;
+}
+
+.logo span{
+    color: #FFE713;
+}
+
+/* --------------------- Main Content ------------------------ */
+main {
+    padding: 0px 45px 0px 150px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 13px;
+    column-gap: 20px;
+}
+
+.titles {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: #109BFF;
+    padding-bottom: 3px;
+}
+
+.tabel {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.linetotal,
+.totalavg, 
+.barchart-total{
+    grid-column: span 4;
+    padding-top: 20px;
+}
+
+/* ----------  Chart Detail ---------- */
+
+.borough-filter{
+    margin-left: 11%;
+}
+
+.dropbtn-borough{
+    padding: 6px 18px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #3f3f3f;
+    background-color: #ebebeb;
+    border: none;
+    border-radius: 5px;
+}
+
+.score-card1,
+.score-card2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+} 
+
+.scoretotal, .scoreprop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 180px;
+    height: 50px;
+    background-color: #0075c956;
+    border: none;
+    border-radius: 7px;
+}
+
+#total-sale-price, #total-property{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #6b6b6b;
+}
+
+.tabelrec {
+    padding: 10px;
+    overflow: auto;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+
+#data-tabel{
+    font-size: 14px;
+}
+
+table th {
+    position: sticky;
+    top : 0;
+    background-color:#4B93FF;
+    color: #FFE713;
+    font-size: 15px;
+    overflow: hidden;
+    word-wrap:break-word;    
+}
+
+table td{
+    overflow: hidden;
+    word-wrap:break-word;
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details > li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+table.dataTable>tbody>tr.child ul.dtr-details > li.dtr-title{
+    font-weight: 300;
+}
+
+.piechart1, .piechart2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    grid-column: span 2;
+}
+
+.pieavg, .pietotal {
+    padding-top: 10px;
+}
+
+#piechart-avg, #pie-total-property-sales{
+    max-height: 255px;
+    max-width: 255px;
+}
+
+.linechartotal, .totalavgchart, .barchart-totalprop-yrbld {
+    margin: 20px 0px;
+    padding: 20px;
+    background-color: #c0bebe2c;
+}
+
+.total-prop-filter-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    font-size: 12px;
+    font-weight: 400;
+    gap:10px;
+}
+
+.total-avg-filter-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    font-size: 12px;
+    font-weight: 400;   
+}
+
+#filterForm{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.total-property-yrbuild-filter-area {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.total-property-yrbuild-filter-area form{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+#yearSelect, 
+#total-avg-sort-by, 
+#total-avg-order-by,
+#year-built-sort-by,
+#year-built-order-by {
+    padding: 6px 18px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #3f3f3f;
+    background-color: #ebebeb;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"],
+button[type="submit"]{
+    padding: 2px 6px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #3f3f3f;
+    background-color: #fff;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+
+input[type="number"]{
+    padding: 3px 5px;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+/* -------------- Footer --------------- */
+.footertitle {
+    padding: 30px 45px 10px 150px;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+}
+
+/*-------- mobile ------*/
+@media (max-width: 767px) {
+    /* --------- Navbar --------- */
+    nav {
+        width: 100%;
+        height: auto;
+        padding: 8px 15px;
+        position: sticky;
+    }
+    
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        gap: 110px;
+    }
+    
+    .account-icon{
+        width: 38px;
+        height: 38px;
+    }
+
+    ul {
+        flex-direction: row;
+        gap: 28px;
+    }
+    
+    .pie-chart-icon{
+        width: 25px;
+        margin: 0px;
+    }
+
+    .line-totalprop-chart-icon,
+    .line-totalvsavg-chart-icon,
+    .bar-yrbuild-chart-icon{
+        width: 23px;
+        margin: 0px;
+    }
+
+    .table-icon{
+        width: 23px;
+        margin: 0px;
+    }
+
+    /* --------- Header and Filter button --------- */
+    header {
+        padding: 20px 0px 30px 0px; 
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+
+    /* --------------------- Main Content ------------------------ */
+    main {
+        padding: 0px 12px 0px 12px;
+    }
+
+    .titles {
+        font-size: 12px;
+    }
+
+    .grid-container {
+        display: grid;
+        row-gap: 60px;
+        column-gap: 0;
+        justify-content: center;
+    }
+
+    /* ----------  Chart Detail ---------- */
+    .borough-filter{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .dropbtn-borough{
+        padding: 4px 11px;
+        font-size: 11px;
+    }
+    
+    .score-card1,
+    .score-card2 {
+        grid-column: span 2;
+        padding: 20px 0px 0px 0px;
+    } 
+
+    .scoretotal, .scoreprop {
+        max-width: 150px;
+        max-height: 38px;
+        border-radius: 9px;
+    }
+
+    #total-sale-price, #total-property{
+        font-size: 12px;
+        max-width: 120px;
+    }
+    
+    .tabel {
+        grid-column: span 4;
+        min-width: 363px;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .tabelrec {
+        padding: 5px;
+    }
+
+    table th {
+        font-size: 13px;
+    }
+
+    #data-tabel{
+        font-size: 12px;
+    }
+
+    #data-tabel_wrapper > .dt-layout-row{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 60px
+    }
+
+    .dt-search{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #data-tabel_wrapper label[for="dt-length-0"]{
+        display: none;
+    }
+
+    .piechart1, .piechart2{
+        grid-column: span 4;
+        gap: 10px;
+    }
+
+    .linetotal, .totalavg, .barchart-total {
+        grid-column: span 4;
+        padding: 0px;
+        margin: 0px 5px;
+    }
+
+    .total-prop-filter-area{
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    #filterForm{
+        font-size: 12px;
+        gap: 15px
+    }
+
+    #filterForm div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .total-property-yrbuild-filter-area {
+        font-size: 12px;
+        font-weight: 400;
+        gap: 15px
+    }
+
+    .total-property-yrbuild-filter-area div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    #yearSelect, 
+    #total-avg-sort-by, 
+    #total-avg-order-by,
+    #year-built-sort-by,
+    #year-built-order-by {
+        padding: 5px 5px;
+        font-size: 10px;
+    }
+    
+    input[type="submit"],
+    button[type="submit"]{
+        padding: 1px 4px;
+        font-size: 10px;
+    }
+    
+    input[type="number"]{
+        padding: 3px 5px;
+        font-size: 13px;
+    }   
+    
+    .linechartotal,
+    .totalavgchart,
+    .barchart-totalprop-yrbld {
+        margin: 0px 10px 0px 10px;
+        padding: 5px;
+    }
+
+    #propertySalesChart,
+    #salesVsAvgPriceChart,
+    #propertySalesByYearBuiltChart {
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .footertitle {
+        padding: 60px 0 12px 0;
+        text-align: center;
+        font-size: 10px;
+    }
+    
+}
+
+/*-------- mobile tablet ------*/
+@media (min-width: 768px) and (max-width: 1199px) {
+    /* --------- Navbar --------- */
+    nav {
+        width: 100%;
+        height: auto;
+        padding: 11px 40px;
+        position: sticky;
+    }
+
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        gap: 46%;
+    }
+
+    .account-icon {
+        width: 70px;
+    }
+
+    ul {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .pie-chart-icon{
+        width: 40px;
+        margin: 0px;   
+    }
+
+    .line-totalprop-chart-icon,
+    .line-totalvsavg-chart-icon,
+    .bar-yrbuild-chart-icon{
+        width: 35px;
+        margin: 0px;
+    }
+    /* --------- Header and Filter button --------- */
+    header {
+        padding: 70px 0 35px 0px;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 35px;
+        padding-bottom: 30px;
+    }
+
+    /* --------------------- Main Content ------------------------ */
+    main {
+        padding: 0px 30px;
+    }
+
+    .filter-button {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .dropbtn-borough {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .dropbtn-month {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .borough-filter{
+        margin-bottom: 15px;
+    }
+
+    .grid-container {
+        row-gap: 50px;
+    }
+
+    .borough-filter{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .dropbtn-borough{
+        padding: 8px 18px;
+        font-size: 17px;
+    }
+    
+    .score-card1,
+    .score-card2 {
+        grid-column: span 2;
+        padding-top: 20px;
+    } 
+
+    .scoretotal, .scoreprop {
+        width: 230px;
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    #total-sale-price, #total-property{
+        font-size: 18px;
+    }
+
+    .tabel {
+        grid-column: span 4;
+        grid-row: span 2;
+        padding: 30px;
+    }
+
+    .tabel_header {
+        font-size: 18px;
+    }
+
+    .tabelrec {
+        padding: 0px 25px 0px 25px;
+        min-height: 350px;
+        background-color: white;
+        overflow: auto;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    table th {
+        font-size: 17px;
+    }
+
+    #data-tabel {
+        font-size: 15px;
+    }
+
+    /* ---------- Chart Detail ---------- */
+    .piechart-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .piechart1,
+    .piechart2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+        grid-column: span 2;
+    }
+
+    #piechart-avg,
+    #pie-total-property-sales {
+        max-height: 350px;
+        max-width: 350px;
+    }
+
+    .linechartotal,
+    .totalavgchart,
+    .barchart-totalprop-yrbld {
+        margin: 0px 20px 0px 20px;
+        padding: 15px;
+    }
+
+    #propertySalesChart,
+    #salesVsAvgPriceChart,
+    #propertySalesByYearBuiltChart {
+        max-width: 100%;
+    }
+
+    /* -------------- Footer --------------- */
+    .footertitle {
+        padding: 80px 0px 25px;
+        text-align: center;
+        font-size: 11px;
+    }
+}

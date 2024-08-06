@@ -20,13 +20,13 @@ class SessionsController extends Controller
             'password'=>'required' 
         ]);
 
-        if(Auth::attempt($attributes))
+        $remember = request()->has('remember'); // Check if 'remember' is checked
+        if(Auth::attempt($attributes, $remember))
         {
             session()->regenerate();
             return redirect('dashboard')->with(['success'=>'You are logged in.']);
         }
         else{
-
             return back()->withErrors(['email'=>'Email or password invalid.']);
         }
     }
@@ -35,7 +35,6 @@ class SessionsController extends Controller
     {
 
         Auth::logout();
-
         return redirect('/login')->with(['success'=>'You\'ve been logged out.']);
     }
 }

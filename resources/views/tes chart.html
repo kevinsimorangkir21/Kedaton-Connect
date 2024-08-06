@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HSI 2023 TELKOMAKSES</title>
+  
+    <link rel="stylesheet" href="teschart.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- DataTable js  -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+  
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css"/>
+    <link 
+        rel="stylesheet"
+        href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.dataTables.min.css"/>
+    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
+
+    <!-- Chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+  </head>
+    <body>
+        
+
+        <header>
+            <div class="logo">
+                <div>HSI <span>2024</span> TELKOMAKSES</div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="borough-filter">
+                <select id="borough-select" class="dropbtn-borough">
+                    <option value="">All Borough</option>
+                    <option value="1">Manhattan</option>
+                    <option value="2">Bronx</option>
+                    <option value="3">Brooklyn</option>
+                    <option value="4">Queens</option>
+                    <option value="5">Staten Island</option>
+                </select>
+            </div>
+            <div class="grid-container">
+                <div class="score-card1">
+                    <div class="titles">Total Sales Price</div>
+                    <div class="scoretotal">
+                        <p id="total-sale-price"></p>
+                    </div>
+                </div>
+        
+                <div class="score-card2">
+                    <div class="titles">Total Building/Property</div>
+                    <div class="scoreprop">
+                        <p id="total-property"></p>
+                    </div>
+                </div>
+                <script src="js/scoreCardFilter.js"></script>
+
+                <div class="tabel">
+                    <div class="tabelrec">
+                        <table id="data-tabel">
+                            <thead>
+                                <tr>
+                                    <th><p>BULAN</p></th>
+                                    <th><p>NAMA</p></th>
+                                    <th><p>STO</p></th>
+                                    <th><p>KETERANGAN</p></th>
+                                    <th><p>MITRA</p></th>
+                                    <th><p>AREA</p></th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <script src="js/tabel.js"></script>           
+                    </div>
+                </div>
+
+                <div class="piechart1" id="piechart">
+                    <div class="titles">Jumlah Data Tahun 2024</div>
+                    <div class="pieavg">
+                        <canvas id="barchart-jumlah" width="400" height="400"></canvas>
+                    </div>
+                    <script src="js/barchart.js" type="text/javascript"></script>
+                </div>
+
+                <div class="piechart2">
+                    <div class="titles">Jumlah Area 2024</div>
+                    <div class= "pietotal" >
+                        <canvas id="piechart-area" width="300" height="300"></canvas>
+                    </div>
+                    <script src="js/piechart.js"></script> 
+                </div>  
+
+                <div class="linetotal" id="linetotal">
+                    <div class="titles">Total Property Sales in Each Borough</div>
+                    <div class="total-prop-filter-area">
+                        <label for="yearSelect">Select Year:</label>
+                        <select id="yearSelect" onchange="updateChartByYear()">
+                            <option value="all">All Years</option>
+                            <!-- Tahun akan ditambahkan secara dinamis oleh JavaScript -->
+                        </select>
+                    </div>
+                    <div class="linechartotal">
+                        <canvas id="propertySalesChart"></canvas>
+                    </div>
+                    <script src="js/totalPropSalesLine.js" type="text/javascript"></script>
+                </div>
+
+                <div class="totalavg" id="totalavg">
+                    <div class="titles">Total Sales Vs Avg Sales Price Per Building Class Category</div>
+                    <div class="total-avg-filter-area">
+                        <form id="filterForm">
+                            <div>
+                                <label for="total-avg-sort-by">Sort By: </label>
+                                <select id="total-avg-sort-by" name="total-avg-sort-by">
+                                    <option value="totalSales" selected>Total Sales</option>
+                                    <option value="avgSales">Average Sales</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="total-avg-order-by">Order By: </label>
+                                <select id="total-avg-order-by" name="total-avg-order-by">
+                                    <option value="asc" selected>Ascending</option>
+                                    <option value="desc">Descending</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit">Apply</button>
+                        </form>
+                    </div>
+                    <div class="totalavgchart">
+                        <canvas id="salesVsAvgPriceChart"></canvas>
+                        <script src="js/salesVsAvgLine.js" type="text/javascript"></script>
+                    </div>
+                </div>
+
+                <div class="barchart-total" id="barchart-total">
+                        <div class="titles">Total Property Sales Based On Year Build</div>
+                    <div class="total-property-yrbuild-filter-area">
+                        <form onsubmit="filterDataSalesByYearBuilt(event)">
+                            <div>
+                                <label for="year-built-from">From Year Built: </label>
+                                <input
+                                    type="number"
+                                    id="year-built-from"
+                                    name="year-built-from"
+                                    min="1111"
+                                    max="2017"
+                                />
+                            </div>
+
+                            <div>
+                                <label for="year-built-to">To Year Built: </label>
+                                <input
+                                    type="number"
+                                    id="year-built-to"
+                                    name="year-built-to"
+                                    min="1111"
+                                    max="2017"
+                                />
+                            </div>                            
+                            <input type="submit" value="Apply" />
+                        </form>
+                    </div>
+                    <div class="total-property-yrbuild-filter-area">
+                        <form onsubmit="sortDataSalesByYearBuilt(event)">
+                            <div>
+                                <label for="year-built-sort-by">Sort By: </label>
+                                <select id="year-built-sort-by" name="year-built-sort-by">
+                                    <option value="yearBuilt" selected>Year Built</option>
+                                    <option value="total">Total Sales</option>
+                                </select> 
+                            </div>
+
+                            <div>
+                                <label for="year-built-order-by">Order By: </label>
+                                <select id="year-built-order-by" name="year-built-order-by">
+                                    <option value="asc" selected>Ascending</option>
+                                    <option value="desc">Descending</option>
+                                </select>
+                            </div>
+                            <input type="submit" value="Apply" />
+                        </form>
+                    </div>
+                    <div class="barchart-totalprop-yrbld">
+                        <canvas id= "propertySalesByYearBuiltChart"></canvas>
+                    </div> 
+                        <script src="js/totalPropSalesYrBuildBar.js" type="text/javascript"></script>    
+                    </div>
+                </div>  
+        </main>
+
+        <footer>
+            <div class="footertitle">Copyright &copy; Section Medan Team 10 RevoU</div>
+        </footer>  
+    </body>
+</html>

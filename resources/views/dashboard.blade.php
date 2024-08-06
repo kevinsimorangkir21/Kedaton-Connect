@@ -1,39 +1,85 @@
 @extends('layouts.user_type.auth')
 
 @section('content')
+    
+
+<div class="piechart1" id="piechart">
+      <h4>Data Tahun 2024 per Bulan</h4>
+      <div id="total-container">
+        Total: <span id="total-amount"></span>
+      </div>
+      <div class="pieavg">
+        <canvas id="barchart-jumlah" width="300" height="300"></canvas>
+      </div>
+        <script src="js/barchart.js" type="text/javascript"></script>
+</div>
+
+<div class="piechart2">
+      <h4>Jumlah Area 2024</h4>
+      <div class= "pietotal" >
+         <canvas id="piechart-area" width="200" height="200"></canvas>
+      </div>
+      <script src="js/piechart.js"></script> 
+</div>
+
+<div class="tabel">
+    <div class="tabelrec">
+      <table id="data-tabel">
+          <thead>
+            <tr>
+              <th><p>BULAN</p></th>
+              <th><p>NAMA</p></th>
+              <th><p>STO</p></th>
+              <th><p>KETERANGAN</p></th>
+              <th><p>MITRA</p></th>
+              <th><p>AREA</p></th>
+            </tr>
+          </thead>
+      </table>
+    <script src="js/tabel.js"></script>           
+  </div>
+</div>
+
+<div class="datel-filter">
+    <select id="datel-select" class="dropbtn-datel">
+        <option value="">All DATEL</option>
+        <option value="METRO AREA">METRO</option>
+        <option value="INNER AREA">INNER AREA</option>
+        <option value="PRINGSEWU AREA">PRINGSEWU</option>
+    </select>
+</div>
 
   <div class="row">
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-8">
-              <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's WO</p>
-                <h5 class="font-weight-bolder mb-0">
-                  17
-                  <span class="text-success text-sm font-weight-bolder">+55%</span>
-                </h5>
-              </div>
+  <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="numbers">
+                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Total WO</p>
+                            <h5 class="font-weight-bolder mb-0" id="total-wo">0</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                            <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
+    <script src="js/scoreCardFilter.js"></script>
+
     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
       <div class="card">
         <div class="card-body p-3">
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Users</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Inner</p>
                 <h5 class="font-weight-bolder mb-0">
-                  2,300
+                  +8
                   <span class="text-success text-sm font-weight-bolder">+3%</span>
                 </h5>
               </div>
@@ -53,9 +99,9 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">New Clients</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Pringsewu</p>
                 <h5 class="font-weight-bolder mb-0">
-                  +3,462
+                  +2
                   <span class="text-danger text-sm font-weight-bolder">-2%</span>
                 </h5>
               </div>
@@ -75,9 +121,9 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Sales</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Metro</p>
                 <h5 class="font-weight-bolder mb-0">
-                  $103,430
+                  +11
                   <span class="text-success text-sm font-weight-bolder">+5%</span>
                 </h5>
               </div>
@@ -92,50 +138,42 @@
       </div>
     </div>
   </div>
-  <div class="row mt-4">
-    <div class="col-lg-7 mb-lg-0 mb-4">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="d-flex flex-column h-100">
-                <p class="mb-1 pt-2 text-bold">Built by developers</p>
-                <h5 class="font-weight-bolder">Telkom Akses  Dashboard</h5>
-                <p class="mb-5">From colors, cards, typography to complex elements, you will find the full documentation.</p>
-                <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-                  Read More
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
-              <div class="bg-gradient-primary border-radius-lg h-100">
-                <img src="../assets/img/shapes/waves-white.svg" class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
-                <div class="position-relative d-flex align-items-center justify-content-center h-100">
-                  <img class="w-100 position-relative z-index-2 pt-4" src="../assets/img/illustrations/rocket-white.png" alt="rocket">
+
+  <div class="row">
+  <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <h4>WO HI INNER</h4>
+                <div class="pietotal">
+                    <canvas id="piechart-inner-area" width="200" height="200"></canvas>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-    <div class="col-lg-5">
-      <div class="card h-100 p-3">
-        <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('../assets/img/ivancik.jpg');">
-          <span class="mask bg-gradient-dark"></span>
-          <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-            <h5 class="text-white font-weight-bolder mb-4 pt-2">Work with the rockets</h5>
-            <p class="text-white">Wealth creation is an evolutionarily recent positive-sum game. It is all about who take the opportunity first.</p>
-            <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-              Read More
-              <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-            </a>
-          </div>
+    <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <h4>WO HI PRINGSEWU</h4>
+                <div class="pietotal">
+                    <canvas id="piechart-pringsewu-area" width="200" height="200"></canvas>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+    <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <h4>WO HI METRO/h4>
+                <div class="pietotal">
+                    <canvas id="piechart-metro-area" width="200" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/innerpie.js"></script>
+
+
   <div class="row mt-4">
     <div class="col-lg-5 mb-lg-0 mb-4">
       <div class="card z-index-2">
@@ -256,7 +294,7 @@
     <div class="col-lg-7">
       <div class="card z-index-2">
         <div class="card-header pb-0">
-          <h6>Sales overview</h6>
+          <h6>Jumlah Data HSI</h6>
           <p class="text-sm">
             <i class="fa fa-arrow-up text-success"></i>
             <span class="font-weight-bold">4% more</span> in 2021
@@ -270,7 +308,41 @@
       </div>
     </div>
   </div>
-  
+  <div class="container">
+        <h2>HSI 2023 Tabel</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Bulan</th>
+                    <th>Tgl Bagi WO</th>
+                    <th>STO</th>
+                    <th>Status</th>
+                    <th>Keterangan</th>
+                    <th>Mitra</th>
+                    <th>Segmen</th>
+                </tr>
+            </thead>
+            <tbody>
+            @forelse ($hsi2023s as $hsi2023)
+                    <tr>
+                        <td>{{ $hsi2023->BULAN }}</td>
+                        <td>{{ $hsi2023->{'TGL BAGI WO'} }}</td>
+                        <td>{{ $hsi2023->STO }}</td>
+                        <td>{{ $hsi2023->STATUS }}</td>
+                        <td>{{ $hsi2023->KETERANGAN }}</td>
+                        <td>{{ $hsi2023->MITRA }}</td>
+                        <td>{{ $hsi2023->SEGMEN }}</td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="7">No data available</td>
+                    </tr>
+                @endforelse
+            </tbody>
+        </table>
+    </div>
+
+    
 
 @endsection
 @push('dashboard')
@@ -290,7 +362,7 @@
             borderSkipped: false,
             backgroundColor: "#fff",
             data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
-            maxBarThickness: 6
+            maxBarThickness: 9
           }, ],
         },
         options: {
@@ -360,9 +432,9 @@
       new Chart(ctx2, {
         type: "line",
         data: {
-          labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
           datasets: [{
-              label: "Mobile apps",
+              label: "2024",
               tension: 0.4,
               borderWidth: 0,
               pointRadius: 0,
@@ -370,12 +442,12 @@
               borderWidth: 3,
               backgroundColor: gradientStroke1,
               fill: true,
-              data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+              data: [388, 218, 295, 195, 256, 179, 235, 26],
               maxBarThickness: 6
 
             },
             {
-              label: "Websites",
+              label: "2023",
               tension: 0.4,
               borderWidth: 0,
               pointRadius: 0,
@@ -383,7 +455,7 @@
               borderWidth: 3,
               backgroundColor: gradientStroke2,
               fill: true,
-              data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+              data: [null, null, null, null, null, 6, 324, 573, 294, 331, 333, 324],
               maxBarThickness: 6
             },
           ],
