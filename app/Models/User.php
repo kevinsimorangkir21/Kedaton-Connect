@@ -23,7 +23,7 @@ class User extends Authenticatable
         'password',
         'phone',
         'location',
-        'about_me',
+        'role', // Menambahkan atribut role
     ];
 
     /**
@@ -44,5 +44,36 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    
+
+    /**
+     * Cek apakah pengguna memiliki peran tertentu.
+     *
+     * @param  string  $role
+     * @return bool
+     */
+    public function hasRole($role)
+    {
+        return $this->role === $role;
+    }
+
+    /**
+     * Cek apakah pengguna memiliki salah satu dari beberapa peran.
+     *
+     * @param  array|string  $roles
+     * @return bool
+     */
+    public function hasAnyRole($roles)
+    {
+        if (is_array($roles)) {
+            foreach ($roles as $role) {
+                if ($this->hasRole($role)) {
+                    return true;
+                }
+            }
+        } else {
+            return $this->hasRole($roles);
+        }
+
+        return false;
+    }
 }
