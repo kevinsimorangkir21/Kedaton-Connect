@@ -1,9 +1,11 @@
-fetch('json/hsi2024.json')
-    .then((response) => response.json())
-    .then((data) => {
-        window.jumlahData = data;
-        createPieChart();
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('json/hsi2024.json')
+        .then((response) => response.json())
+        .then((data) => {
+            window.jumlahData = data;
+            createPieChart();
+        });
+});
 
 function createPieChart() {
     const ctx = document.getElementById('piechart-area').getContext('2d');
@@ -43,6 +45,12 @@ function createPieChart() {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            animation: {
+                animateScale: true,
+                animateRotate: true,
+                duration: 1500,
+                easing: 'easeOutExpo'
+            },
             plugins: {
                 legend: {
                     position: 'top',
@@ -59,7 +67,7 @@ function createPieChart() {
                     },
                     font: {
                         weight: 'bold',
-                        size: 13
+                        size: 15
                     },
                     anchor: 'end',
                     align: 'start'
