@@ -14,11 +14,12 @@
         <script src="js/barchart.js" type="text/javascript"></script>
 </div>
 
+<div class="row mt-4">
 <div class="grid-container">
 <div class="piechart2">
       <h4>Jumlah Area 2024</h4>
       <div class= "pietotal" >
-         <canvas id="piechart-area" width="230" height="230"></canvas>
+         <canvas id="piechart-area" width="260" height="260"></canvas>
       </div>
       <script src="js/piechart.js"></script> 
 </div>
@@ -49,6 +50,7 @@
         <option value="INNER AREA">INNER AREA</option>
         <option value="PRINGSEWU AREA">PRINGSEWU</option>
     </select>
+</div>
 </div>
 
   <div class="row mt-4">
@@ -165,7 +167,7 @@
     <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
-                <h4>WO HI METRO/h4>
+                <h4>WO HI METRO</h4>
                 <div class="pietotal">
                     <canvas id="piechart-metro-area" width="200" height="200"></canvas>
                 </div>

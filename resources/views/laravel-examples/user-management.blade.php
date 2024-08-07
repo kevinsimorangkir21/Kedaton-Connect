@@ -58,7 +58,7 @@
                                         <p class="text-xs font-weight-bold mb-0">Admin</p>
                                     </td>
                                     <td class="text-center">
-                                        <p class="text-xs font-weight-bold mb-0">admin@telkom.com</p>
+                                        <p class="text-xs font-weight-bold mb-0">admin@telkomakses.com</p>
                                     </td>
                                     <td class="text-center">
                                         <p class="text-xs font-weight-bold mb-0">Admin</p>

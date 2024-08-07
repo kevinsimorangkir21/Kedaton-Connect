@@ -28,14 +28,14 @@ function createPieChart() {
                 label: 'Jumlah Per Area',
                 data: Object.values(areaCounts),
                 backgroundColor: [
-                    '#ffd166', // Krem
-                    '#006d77', // biru muda
-                    '#ed6a5a'  // Merah
+                    '#00a9a5', // nila
+                    '#003049', // biru
+                    '#d62828'  // Merah
                 ],
                 borderColor: [
-                    '#ffd166', // Krem
-                    '#006d77', // biru muda
-                    '#ed6a5a'  // Merah
+                    '#00a9a5', // nila
+                    '#003049', // biru 
+                    '#d62828'  // Merah
                 ],
                 borderWidth: 1
             }]
@@ -59,7 +59,7 @@ function createPieChart() {
                     },
                     font: {
                         weight: 'bold',
-                        size: 11
+                        size: 13
                     },
                     anchor: 'end',
                     align: 'start'

@@ -75,7 +75,15 @@ function createBarChart() {
             scales: {
                 y: {
                     beginAtZero: true
-                }
+                },
+                x: {
+                    grid: {
+                      drawBorder: false,
+                      display: false,
+                      drawOnChartArea: false,
+                      drawTicks: false
+                    },
+                  },
             },
             plugins: {
                 legend: {
