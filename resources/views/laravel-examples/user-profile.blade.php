@@ -10,10 +10,10 @@
         <div class="card card-body blur shadow-blur mx-4 mt-n6">
             <div class="row gx-4">
                 <div class="col-auto">
-            <div class="avatar avatar-xl position-relative">
-              <img src="../assets/img/bruce-mars.jpg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
-            </div>
-          </div>
+                    <div class="avatar avatar-xl position-relative">
+                        <img src="../assets/img/bruce-mars.jpg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+                    </div>
+                </div>
                 <div class="col-auto my-auto">
                     <div class="h-100">
                         <h3>Selamat Datang, <b> {{ Auth::user()->name }} </b> </h3>
@@ -38,18 +38,16 @@
                 <form action="/user-profile" method="POST" role="form text-left">
                     @csrf
                     @if($errors->any())
-                        <div class="mt-3  alert alert-primary alert-dismissible fade show" role="alert">
-                            <span class="alert-text text-white">
-                            {{$errors->first()}}</span>
+                        <div class="mt-3 alert alert-primary alert-dismissible fade show" role="alert">
+                            <span class="alert-text text-white">{{ $errors->first() }}</span>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                                 <i class="fa fa-close" aria-hidden="true"></i>
                             </button>
                         </div>
                     @endif
                     @if(session('success'))
-                        <div class="m-3  alert alert-success alert-dismissible fade show" id="alert-success" role="alert">
-                            <span class="alert-text text-white">
-                            {{ session('success') }}</span>
+                        <div class="m-3 alert alert-success alert-dismissible fade show" id="alert-success" role="alert">
+                            <span class="alert-text text-white">{{ session('success') }}</span>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                                 <i class="fa fa-close" aria-hidden="true"></i>
                             </button>
@@ -61,7 +59,7 @@
                                 <label for="user-name" class="form-control-label">{{ __('Full Name') }}</label>
                                 <span class="text-danger">*</span>
                                 <div class="@error('user.name')border border-danger rounded-3 @enderror">
-                                    <input class="form-control" value="{{ auth()->user()->name }}" type="text" placeholder="Name" required id="user-name" name="name">
+                                    <input class="form-control" value="{{ auth()->user()->name }}" type="text" placeholder="Full Name" required id="user-name" name="name">
                                         @error('name')
                                             <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                         @enderror
@@ -73,7 +71,7 @@
                                 <label for="user-email" class="form-control-label">{{ __('Email') }}</label>
                                 <span class="text-danger">*</span>
                                 <div class="@error('email')border border-danger rounded-3 @enderror">
-                                    <input class="form-control" value="{{ auth()->user()->email }}" type="email" required placeholder="@example.com" id="user-email" name="email">
+                                    <input class="form-control" value="{{ auth()->user()->email }}" type="email" required placeholder="@telkomakses.com" id="user-email" name="email">
                                         @error('email')
                                             <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                         @enderror
@@ -86,10 +84,13 @@
                             <div class="form-group">
                                 <label for="user.phone" class="form-control-label">{{ __('Phone') }}</label>
                                 <div class="@error('user.phone')border border-danger rounded-3 @enderror">
-                                    <input class="form-control" type="tel" placeholder="40770888444" id="number" name="phone" value="{{ auth()->user()->phone }}">
-                                        @error('phone')
-                                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
-                                        @enderror
+                                    <div class="input-group">
+                                        <span class="input-group-text">+62</span>
+                                        <input class="form-control" type="tel" placeholder="XXXXXXXXXX" id="number" name="phone" value="{{ auth()->user()->phone }}">
+                                    </div>
+                                    @error('phone')
+                                        <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
