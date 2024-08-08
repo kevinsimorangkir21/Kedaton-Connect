@@ -3,23 +3,31 @@
 @section('content')
     
 <div class="grid-container1">
-  <div class="barchart-container" id="barchart">
-    <h4>Data Bulanan Tahun 2024</h4>
-    <div id="total-container">
-      Total: <span id="total-amount"></span>
-    </div>
-    <div class="chart-wrapper">
-      <canvas id="barchart-jumlah" width="400" height="300"></canvas>
-    </div>
+  <div class="card">
+    <div class="card-body p-3">
+      <div class="barchart-container" id="barchart">
+      <h4>Data Bulanan Tahun 2024</h4>
+        <div id="total-container">
+        Total: <span id="total-amount"></span>
+        </div>
+        <div class="chart-wrapper">
+        <canvas id="barchart-jumlah" width="400" height="300"></canvas>
+        </div>
     <script src="js/barchart.js" type="text/javascript"></script>
+      </div>
+    </div>
   </div>
 
-  <div class="piechart-container">
-    <h4>Data 3 Area 2024</h4>
-    <div class="chart-wrapper">
-      <canvas id="piechart-area" width="280" height="280"></canvas>
+  <div class="card">
+    <div class="card-body p-3">
+      <div class="piechart-container">
+      <h4>Data 3 Area 2024</h4>
+      <div class="chart-wrapper">
+        <canvas id="piechart-area" width="280" height="280"></canvas>
+      </div>
+      <script src="js/piechart.js"></script> 
+      </div>
     </div>
-    <script src="js/piechart.js"></script> 
   </div>
 </div>
 
