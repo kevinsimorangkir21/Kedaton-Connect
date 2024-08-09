@@ -11,10 +11,16 @@
             <h6 class="font-weight-bolder mb-0 text-capitalize">{{ str_replace('-', ' ', Request::path()) }}</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 d-flex justify-content-end" id="navbar"> 
-            <div class="nav-item d-flex align-self-end">
-                <a href="https://docs.google.com/spreadsheets/d/1wJcP47ZJD0ao1qNJeVolZYE3HrwC8ABIqr0aifRnfr8/edit#gid=55332613" target="_blank" class="btn btn-primary active mb-0 text-white" role="button" aria-pressed="true">
-                    <i class="fa-solid fa-file"></i> Spreadsheet
+            <div class="nav-item dropdown d-flex align-self-end">
+                <a href="#" class="btn btn-primary active mb-0 text-white dropdown-toggle" role="button" id="spreadsheetDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-file"></i> File
                 </a>
+                <ul class="dropdown-menu" aria-labelledby="spreadsheetDropdown">
+                    <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1wJcP47ZJD0ao1qNJeVolZYE3HrwC8ABIqr0aifRnfr8/edit#gid=55332613" target="_blank">NEW ALL ORDER HSI LAMPUNG</a></li>
+                    <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1V-N9sFMobS8UKH44Sa842jo_-fAwCFR_nTo_v-vlivA/edit?gid=0#gid=0" target="_blank">PT3 BGES & AODM</a></li>
+                    <!-- <li><a class="dropdown-item" href="#" target="_blank">Spreadsheet 3</a></li>
+                    <li><a class="dropdown-item" href="#" target="_blank">Spreadsheet 4</a></li> -->
+                </ul>
             </div>
             <div class="ms-md-3 pe-md-3 d-flex align-items-center">
                 <div class="input-group">
@@ -22,7 +28,7 @@
                     <input type="text" class="form-control" placeholder="Type here...">
                 </div>
             </div>
-            <ul class="navbar-nav  justify-content-end">
+            <ul class="navbar-nav justify-content-end">
                 <li class="nav-item d-flex align-items-center">
                     <a href="{{ url('/logout')}}" class="nav-link text-body font-weight-bold px-0">
                         <i class="fa-solid fa-door-open"></i>

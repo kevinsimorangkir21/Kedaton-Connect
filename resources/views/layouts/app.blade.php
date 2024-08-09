@@ -23,24 +23,27 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
 
   <!-- Preloader styles -->
-  <style>
-    #preloader {
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.8);
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .loader img {
-      width: 120px; /* Adjust the size of your logo */
-      height: auto;
-    }
-  </style>
+  <!-- Preloader styles -->
+<!-- Preloader styles -->
+<style>
+  #preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1); /* Background changed to black */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader img {
+    width: 200px; /* Adjust the size of your logo to be bigger */
+    height: auto;
+  }
+</style>
+
 </head>
 
 <body class="g-sidenav-show bg-gray-100">

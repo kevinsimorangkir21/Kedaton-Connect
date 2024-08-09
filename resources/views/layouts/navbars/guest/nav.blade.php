@@ -75,7 +75,7 @@
         <div class="row">
           <!-- Developer 1 -->
           <div class="col-md-6 mb-3">
-            <img src="path-to-developer1-photo.jpg" alt="Developer 1 Photo" class="img-fluid rounded-circle mb-2" style="max-width: 150px;">
+            <img src="../assets/img/KEVINS.jpg" alt="Developer 1 Photo" class="img-fluid rounded-circle mb-1" style="max-width: 150px;">
             <h4>Developer 1 Name</h4>
             <p>Brief description or role of Developer 1.</p>
           </div>
