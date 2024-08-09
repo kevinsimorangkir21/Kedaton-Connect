@@ -2,6 +2,20 @@
 
 @section('content')
 
+@php
+    $currentHour = (new \DateTime('now', new \DateTimeZone('Asia/Jakarta')))->format('H');
+
+    if ($currentHour >= 5 && $currentHour < 10) {
+        $greeting = 'Selamat Pagi';
+    } elseif ($currentHour >= 10 && $currentHour < 15) {
+        $greeting = 'Selamat Siang';
+    } elseif ($currentHour >= 15 && $currentHour < 18) {
+        $greeting = 'Selamat Sore';
+    } else {
+        $greeting = 'Selamat Malam';
+    }
+@endphp
+
 <div>
     <div class="container-fluid">
         <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('../assets/img/curved-images/gambar3.png'); background-position-y: 50%;">
@@ -16,8 +30,8 @@
                 </div>
                 <div class="col-auto my-auto">
                     <div class="h-100">
-                        <h3>Selamat Datang, <b> {{ Auth::user()->name }} </b> </h3>
-                        <h5>Unit {{ Auth::user()->location }} | {{ Auth::user()->phone}}</h5>
+                        <h3>{{ $greeting }}, <b>{{ Auth::user()->name }}</b></h3>
+                        <h5>Unit {{ Auth::user()->location }} | {{ Auth::user()->phone }}</h5>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
@@ -56,25 +70,25 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="user-name" class="form-control-label">{{ __('Full Name') }}</label>
+                                <label for="user-name" class="form-control-label" role="label">{{ __('Full Name') }}</label>
                                 <span class="text-danger">*</span>
-                                <div class="@error('user.name')border border-danger rounded-3 @enderror">
+                                <div class="@error('user.name')border border-danger rounded-3 @enderror" role="group">
                                     <input class="form-control" value="{{ auth()->user()->name }}" type="text" placeholder="Full Name" required id="user-name" name="name">
-                                        @error('name')
-                                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
-                                        @enderror
+                                    @error('name')
+                                        <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="user-email" class="form-control-label">{{ __('Email') }}</label>
+                                <label for="user-email" class="form-control-label" role="label">{{ __('Email') }}</label>
                                 <span class="text-danger">*</span>
-                                <div class="@error('email')border border-danger rounded-3 @enderror">
+                                <div class="@error('email')border border-danger rounded-3 @enderror" role="group">
                                     <input class="form-control" value="{{ auth()->user()->email }}" type="email" required placeholder="@telkomakses.com" id="user-email" name="email">
-                                        @error('email')
-                                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
-                                        @enderror
+                                    @error('email')
+                                        <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
@@ -82,8 +96,8 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="user.phone" class="form-control-label">{{ __('Phone') }}</label>
-                                <div class="@error('user.phone')border border-danger rounded-3 @enderror">
+                                <label for="user-phone" class="form-control-label" role="label">{{ __('Phone') }}</label>
+                                <div class="@error('user.phone')border border-danger rounded-3 @enderror" role="group">
                                     <div class="input-group">
                                         <span class="input-group-text">+62</span>
                                         <input class="form-control" type="tel" placeholder="XXXXXXXXXX" id="number" name="phone" value="{{ auth()->user()->phone }}">
@@ -96,16 +110,16 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="user.location" class="form-control-label">{{ __('Unit') }}</label>
+                                <label for="user-location" class="form-control-label" role="label">{{ __('Unit') }}</label>
                                 <span class="text-danger">*</span>
-                                <div class="@error('user.location') border border-danger rounded-3 @enderror">
+                                <div class="@error('user.location') border border-danger rounded-3 @enderror" role="group">
                                     <input class="form-control" type="text" placeholder="Location" id="name" required name="location" value="{{ auth()->user()->location }}">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn bg-gradient-dark btn-md mt-4 mb-4">{{ 'Save Changes' }}</button>
+                        <button type="submit" class="btn bg-gradient-dark btn-md mt-4 mb-4" role="button">{{ 'Save Changes' }}</button>
                     </div>
                 </form>
 

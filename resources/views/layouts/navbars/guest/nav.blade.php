@@ -50,14 +50,14 @@
           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#developerModal">Developer</a>
         </li>
       </ul>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <!-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link me-2" href="{{ auth()->user() ? url('static-sign-up') : url('register') }}">
             <i class="fas fa-user-plus opacity-6 me-1 {{ (Request::is('static-sign-up') ? '' : 'text-dark') }}"></i>
             Sign Up
           </a>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </nav>
