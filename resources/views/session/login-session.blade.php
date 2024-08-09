@@ -10,8 +10,11 @@
             <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
               <div class="card card-plain mt-8">
                 <div class="card-header pb-0 text-left bg-transparent">
-                  <h3 class="font-weight-bolder text-info text-gradient">Welcome back</h3>
-                  <p class="mb-0">Create a new acount<br></p>
+                  <!-- Mengubah teks di sini dengan ID "animatedText" -->
+                  <h3 class="font-weight-bolder text-info text-gradient" id="animatedTextContainer">
+                    <span id="animatedText"></span>
+                  </h3>
+                  <p class="mb-0">Create a new account<br></p>
                   <p class="mb-0">Or Sign in with your account</p>
                 </div>
                 <div class="card-body">
@@ -41,7 +44,7 @@
                   </form>
                 </div>
                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                <small class="text-muted">Forgot you password? Reset you password 
+                <small class="text-muted">Forgot your password? Reset your password 
                   <a href="/login/forgot-password" class="text-info text-gradient font-weight-bold">here</a>
                 </small>
                   <p class="mb-4 text-sm mx-auto">
@@ -61,5 +64,49 @@
       </div>
     </section>
   </main>
+
+  <!-- Tambahkan JavaScript untuk animasi teks dengan efek menulis -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const texts = ["Welcome Back", "Selamat Datang", "いらっしゃいませ"];
+      let index = 0;
+      let charIndex = 0;
+      const element = document.getElementById("animatedText");
+      const typingSpeed = 100; // Kecepatan mengetik
+      const erasingSpeed = 50; // Kecepatan menghapus
+      const newTextDelay = 1500; // Delay sebelum teks baru dimulai
+
+      function typeText() {
+        if (charIndex < texts[index].length) {
+          element.textContent += texts[index].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeText, typingSpeed);
+        } else {
+          setTimeout(eraseText, newTextDelay);
+        }
+      }
+
+      function eraseText() {
+        if (charIndex > 0) {
+          element.textContent = texts[index].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(eraseText, erasingSpeed);
+        } else {
+          index = (index + 1) % texts.length;
+          setTimeout(typeText, typingSpeed + 500);
+        }
+      }
+
+      setTimeout(typeText, newTextDelay + 250);
+    });
+  </script>
+
+  <!-- Tambahkan CSS untuk mencegah elemen bergerak -->
+  <style>
+    #animatedTextContainer {
+      height: 1.2em; /* Atur tinggi sesuai ukuran font */
+      display: inline-block;
+    }
+  </style>
 
 @endsection
