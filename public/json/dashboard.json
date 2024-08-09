@@ -4,8 +4,8 @@
     "NO.": 1,
     "DATEL": "INNER AREA",
     "STO": "KDT",
-    "WO HI": 5,
-    "ALL WO": 8,
+    "WO HI": 1,
+    "ALL WO": 4,
     "ON HAND TEKNISI": 0,
     "SURVEY TEKNISI": 0,
     "TARIK DC PROGRESS": 0,
@@ -16,11 +16,12 @@
     "KENDALA PERANGKAT": 0,
     "KENDALA SISTEM": 0,
     "KENDALA RETI/SEKTOR": 0,
-    "PENDING PELANGGAN/RNA": 4,
+    "PENDING PELANGGAN/RNA": 1,
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
-    "CANCEL": 1,
-    "KENDALA TEKNISI": 0
+    "CANCEL": 0,
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -43,7 +44,8 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -66,17 +68,18 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
     "NO.": 4,
     "DATEL": "INNER AREA",
     "STO": "NTR",
-    "WO HI": 0,
+    "WO HI": 1,
     "ALL WO": "",
     "ON HAND TEKNISI": 0,
-    "SURVEY TEKNISI": 0,
+    "SURVEY TEKNISI": 1,
     "TARIK DC PROGRESS": 0,
     "TARIK DC COMPLETE": 0,
     "SALPEN OK PENDING PELANGGAN": 0,
@@ -89,7 +92,8 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -112,7 +116,8 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -135,7 +140,8 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -158,30 +164,32 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
     "NO.": 8,
     "DATEL": "INNER AREA",
     "STO": "TJK",
-    "WO HI": 3,
+    "WO HI": 2,
     "ALL WO": "",
-    "ON HAND TEKNISI": 0,
-    "SURVEY TEKNISI": 0,
+    "ON HAND TEKNISI": 1,
+    "SURVEY TEKNISI": 1,
     "TARIK DC PROGRESS": 0,
     "TARIK DC COMPLETE": 0,
     "SALPEN OK PENDING PELANGGAN": 0,
-    "POTENSI PS AKTIVASI": 1,
+    "POTENSI PS AKTIVASI": 0,
     "COMPLETED (PS)": 0,
     "KENDALA PERANGKAT": 0,
     "KENDALA SISTEM": 0,
     "KENDALA RETI/SEKTOR": 0,
-    "PENDING PELANGGAN/RNA": 2,
+    "PENDING PELANGGAN/RNA": 0,
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -204,7 +212,8 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -212,7 +221,7 @@
     "DATEL": "PRINGSEWU AREA",
     "STO": "BDU",
     "WO HI": 0,
-    "ALL WO": 5,
+    "ALL WO": 4,
     "ON HAND TEKNISI": 0,
     "SURVEY TEKNISI": 0,
     "TARIK DC PROGRESS": 0,
@@ -227,17 +236,18 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
     "NO.": 11,
     "DATEL": "PRINGSEWU AREA",
     "STO": "BKM",
-    "WO HI": 2,
+    "WO HI": 0,
     "ALL WO": "",
     "ON HAND TEKNISI": 0,
-    "SURVEY TEKNISI": 2,
+    "SURVEY TEKNISI": 0,
     "TARIK DC PROGRESS": 0,
     "TARIK DC COMPLETE": 0,
     "SALPEN OK PENDING PELANGGAN": 0,
@@ -250,7 +260,8 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -273,7 +284,8 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -296,7 +308,8 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -319,14 +332,39 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
     "NO.": 15,
     "DATEL": "PRINGSEWU AREA",
     "STO": "KOT",
-    "WO HI": 0,
+    "WO HI": 1,
+    "ALL WO": "",
+    "ON HAND TEKNISI": 0,
+    "SURVEY TEKNISI": 0,
+    "TARIK DC PROGRESS": 1,
+    "TARIK DC COMPLETE": 0,
+    "SALPEN OK PENDING PELANGGAN": 0,
+    "POTENSI PS AKTIVASI": 0,
+    "COMPLETED (PS)": 0,
+    "KENDALA PERANGKAT": 0,
+    "KENDALA SISTEM": 0,
+    "KENDALA RETI/SEKTOR": 0,
+    "PENDING PELANGGAN/RNA": 0,
+    "KENDALA PT2/TANAM TIANG": 0,
+    "KENDALA TEKNIK PT3": 0,
+    "CANCEL": 0,
+    "KENDALA TEKNISI": 0,
+    "__1": ""
+  },
+  {
+    "": "",
+    "NO.": 16,
+    "DATEL": "PRINGSEWU AREA",
+    "STO": "KRU",
+    "WO HI": 1,
     "ALL WO": "",
     "ON HAND TEKNISI": 0,
     "SURVEY TEKNISI": 0,
@@ -338,34 +376,12 @@
     "KENDALA PERANGKAT": 0,
     "KENDALA SISTEM": 0,
     "KENDALA RETI/SEKTOR": 0,
-    "PENDING PELANGGAN/RNA": 0,
+    "PENDING PELANGGAN/RNA": 1,
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
-  },
-  {
-    "": "",
-    "NO.": 16,
-    "DATEL": "PRINGSEWU AREA",
-    "STO": "KRU",
-    "WO HI": 1,
-    "ALL WO": "",
-    "ON HAND TEKNISI": 1,
-    "SURVEY TEKNISI": 0,
-    "TARIK DC PROGRESS": 0,
-    "TARIK DC COMPLETE": 0,
-    "SALPEN OK PENDING PELANGGAN": 0,
-    "POTENSI PS AKTIVASI": 0,
-    "COMPLETED (PS)": 0,
-    "KENDALA PERANGKAT": 0,
-    "KENDALA SISTEM": 0,
-    "KENDALA RETI/SEKTOR": 0,
-    "PENDING PELANGGAN/RNA": 0,
-    "KENDALA PT2/TANAM TIANG": 0,
-    "KENDALA TEKNIK PT3": 0,
-    "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -388,7 +404,8 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -397,21 +414,22 @@
     "STO": "PRW",
     "WO HI": 2,
     "ALL WO": "",
-    "ON HAND TEKNISI": 1,
+    "ON HAND TEKNISI": 0,
     "SURVEY TEKNISI": 0,
     "TARIK DC PROGRESS": 0,
     "TARIK DC COMPLETE": 0,
     "SALPEN OK PENDING PELANGGAN": 0,
-    "POTENSI PS AKTIVASI": 0,
+    "POTENSI PS AKTIVASI": 1,
     "COMPLETED (PS)": 0,
     "KENDALA PERANGKAT": 0,
     "KENDALA SISTEM": 0,
     "KENDALA RETI/SEKTOR": 0,
-    "PENDING PELANGGAN/RNA": 0,
+    "PENDING PELANGGAN/RNA": 1,
     "KENDALA PT2/TANAM TIANG": 0,
-    "KENDALA TEKNIK PT3": 1,
+    "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -434,17 +452,18 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
     "NO.": 20,
     "DATEL": "METRO AREA",
     "STO": "BDA",
-    "WO HI": 3,
-    "ALL WO": 8,
-    "ON HAND TEKNISI": 1,
-    "SURVEY TEKNISI": 1,
+    "WO HI": 0,
+    "ALL WO": 7,
+    "ON HAND TEKNISI": 0,
+    "SURVEY TEKNISI": 0,
     "TARIK DC PROGRESS": 0,
     "TARIK DC COMPLETE": 0,
     "SALPEN OK PENDING PELANGGAN": 0,
@@ -453,11 +472,12 @@
     "KENDALA PERANGKAT": 0,
     "KENDALA SISTEM": 0,
     "KENDALA RETI/SEKTOR": 0,
-    "PENDING PELANGGAN/RNA": 1,
+    "PENDING PELANGGAN/RNA": 0,
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -480,14 +500,39 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
     "NO.": 22,
     "DATEL": "METRO AREA",
     "STO": "MET",
-    "WO HI": 4,
+    "WO HI": 5,
+    "ALL WO": "",
+    "ON HAND TEKNISI": 2,
+    "SURVEY TEKNISI": 1,
+    "TARIK DC PROGRESS": 2,
+    "TARIK DC COMPLETE": 0,
+    "SALPEN OK PENDING PELANGGAN": 0,
+    "POTENSI PS AKTIVASI": 0,
+    "COMPLETED (PS)": 0,
+    "KENDALA PERANGKAT": 0,
+    "KENDALA SISTEM": 0,
+    "KENDALA RETI/SEKTOR": 0,
+    "PENDING PELANGGAN/RNA": 0,
+    "KENDALA PT2/TANAM TIANG": 0,
+    "KENDALA TEKNIK PT3": 0,
+    "CANCEL": 0,
+    "KENDALA TEKNISI": 0,
+    "__1": ""
+  },
+  {
+    "": "",
+    "NO.": 23,
+    "DATEL": "METRO AREA",
+    "STO": "MGA",
+    "WO HI": 1,
     "ALL WO": "",
     "ON HAND TEKNISI": 1,
     "SURVEY TEKNISI": 0,
@@ -495,29 +540,6 @@
     "TARIK DC COMPLETE": 0,
     "SALPEN OK PENDING PELANGGAN": 0,
     "POTENSI PS AKTIVASI": 0,
-    "COMPLETED (PS)": 1,
-    "KENDALA PERANGKAT": 0,
-    "KENDALA SISTEM": 0,
-    "KENDALA RETI/SEKTOR": 0,
-    "PENDING PELANGGAN/RNA": 1,
-    "KENDALA PT2/TANAM TIANG": 0,
-    "KENDALA TEKNIK PT3": 0,
-    "CANCEL": 0,
-    "KENDALA TEKNISI": 1
-  },
-  {
-    "": "",
-    "NO.": 23,
-    "DATEL": "METRO AREA",
-    "STO": "MGA",
-    "WO HI": 0,
-    "ALL WO": "",
-    "ON HAND TEKNISI": 0,
-    "SURVEY TEKNISI": 0,
-    "TARIK DC PROGRESS": 0,
-    "TARIK DC COMPLETE": 0,
-    "SALPEN OK PENDING PELANGGAN": 0,
-    "POTENSI PS AKTIVASI": 0,
     "COMPLETED (PS)": 0,
     "KENDALA PERANGKAT": 0,
     "KENDALA SISTEM": 0,
@@ -526,36 +548,14 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
     "NO.": 24,
     "DATEL": "METRO AREA",
     "STO": "SKD",
-    "WO HI": 1,
-    "ALL WO": "",
-    "ON HAND TEKNISI": 0,
-    "SURVEY TEKNISI": 0,
-    "TARIK DC PROGRESS": 0,
-    "TARIK DC COMPLETE": 0,
-    "SALPEN OK PENDING PELANGGAN": 0,
-    "POTENSI PS AKTIVASI": 0,
-    "COMPLETED (PS)": 0,
-    "KENDALA PERANGKAT": 0,
-    "KENDALA SISTEM": 0,
-    "KENDALA RETI/SEKTOR": 0,
-    "PENDING PELANGGAN/RNA": 1,
-    "KENDALA PT2/TANAM TIANG": 0,
-    "KENDALA TEKNIK PT3": 0,
-    "CANCEL": 0,
-    "KENDALA TEKNISI": 0
-  },
-  {
-    "": "",
-    "NO.": 25,
-    "DATEL": "METRO AREA",
-    "STO": "UNT",
     "WO HI": 0,
     "ALL WO": "",
     "ON HAND TEKNISI": 0,
@@ -572,7 +572,32 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
+  },
+  {
+    "": "",
+    "NO.": 25,
+    "DATEL": "METRO AREA",
+    "STO": "UNT",
+    "WO HI": 1,
+    "ALL WO": "",
+    "ON HAND TEKNISI": 1,
+    "SURVEY TEKNISI": 0,
+    "TARIK DC PROGRESS": 0,
+    "TARIK DC COMPLETE": 0,
+    "SALPEN OK PENDING PELANGGAN": 0,
+    "POTENSI PS AKTIVASI": 0,
+    "COMPLETED (PS)": 0,
+    "KENDALA PERANGKAT": 0,
+    "KENDALA SISTEM": 0,
+    "KENDALA RETI/SEKTOR": 0,
+    "PENDING PELANGGAN/RNA": 0,
+    "KENDALA PT2/TANAM TIANG": 0,
+    "KENDALA TEKNIK PT3": 0,
+    "CANCEL": 0,
+    "KENDALA TEKNISI": 0,
+    "__1": ""
   },
   {
     "": "",
@@ -595,6 +620,31 @@
     "KENDALA PT2/TANAM TIANG": 0,
     "KENDALA TEKNIK PT3": 0,
     "CANCEL": 0,
-    "KENDALA TEKNISI": 0
+    "KENDALA TEKNISI": 0,
+    "__1": ""
+  },
+  {
+    "": "",
+    "NO.": "GRAND TOTAL",
+    "DATEL": "",
+    "STO": "",
+    "WO HI": "",
+    "ALL WO": "",
+    "ON HAND TEKNISI": 5,
+    "SURVEY TEKNISI": 3,
+    "TARIK DC PROGRESS": 3,
+    "TARIK DC COMPLETE": 0,
+    "SALPEN OK PENDING PELANGGAN": 0,
+    "POTENSI PS AKTIVASI": 1,
+    "COMPLETED (PS)": 0,
+    "KENDALA PERANGKAT": 0,
+    "KENDALA SISTEM": 0,
+    "KENDALA RETI/SEKTOR": 0,
+    "PENDING PELANGGAN/RNA": 3,
+    "KENDALA PT2/TANAM TIANG": 0,
+    "KENDALA TEKNIK PT3": 0,
+    "CANCEL": 0,
+    "KENDALA TEKNISI": 0,
+    "__1": 15
   }
 ]

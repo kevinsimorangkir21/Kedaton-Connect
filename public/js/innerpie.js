@@ -12,16 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function createPieCharts() {
     const datels = ["METRO AREA", "INNER AREA", "PRINGSEWU AREA"];
     const colors = [
-        '#4e79a7', // Biru
-        '#f28e2b', // Oranye
-        '#e15759', // Merah
-        '#76b7b2', // Hijau Mint
-        '#59a14f', // Hijau
-        '#edc949', // Kuning
-        '#af7aa1', // Ungu Muda
-        '#ff9da7', // Merah Muda
-        '#9c755f', // Coklat
-        '#bab0ac'  // Abu-abu
+        '#4e79a7', '#f28e2b', '#e15759', '#76b7b2', '#59a14f',
+        '#edc949', '#af7aa1', '#ff9da7', '#9c755f', '#bab0ac'
     ];
 
     datels.forEach((datel, index) => {
@@ -86,3 +78,40 @@ function createPieCharts() {
         }
     });
 }
+
+// Menangani upload file JSON baru untuk Pie Charts
+document.getElementById('upload-dashboard-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var fileInput = document.getElementById('dashboardFile');
+    var file = fileInput.files[0];
+
+    if (file.name !== 'dashboard.json') {
+        alert('Hanya file dengan nama "dashboard.json" yang diizinkan.');
+        return;
+    }
+
+    var formData = new FormData();
+    formData.append('dashboardFile', file);
+
+    fetch('/upload-dashboard', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        if (data.message.includes('berhasil')) {
+            fetch('json/dashboard.json')
+                .then(response => response.json())
+                .then(data => {
+                    window.jumlahData = data;
+                    createPieCharts(); // Panggil ulang fungsi untuk refresh chart
+                });
+        }
+    })
+    .catch(error => console.error('Error:', error));
+});

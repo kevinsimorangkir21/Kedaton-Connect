@@ -2,6 +2,37 @@
 
 @section('content')
     
+  <!-- Form untuk upload file JSON -->
+<div class="grid-container2">
+  <div class="card">
+    <div class="card-body p-3">
+      <h4>Update Data 2024</h4>
+      <form id="upload-json-form" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+          <label for="jsonFile" class="form-label"></label>
+          <input type="file" id="jsonFile" name="jsonFile" accept=".json" class="form-control-file">
+        </div>
+    <button type="submit" class="btn btn-primary">Upload Data 2024</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body p-3">
+      <h4>Update Dashboard ALL</h4>
+      <form id="upload-dashboard-form" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+          <label for="jsonFile" class="form-label"></label>
+          <input type="file" id="dashboardFile" name="dashboardFile" accept=".json">
+        </div>
+      <button type="submit" class="btn btn-primary">Upload Dashboard ALL</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <div class="grid-container1">
   <div class="card">
     <div class="card-body p-3">
@@ -33,7 +64,7 @@
 
 
 <div class="row mt-4">
-<div class="grid-container">
+<!-- <div class="grid-container">
 <div class="piechart2">
       <h4>Jumlah Area 2024</h4>
       <div class= "pietotal" >
@@ -59,7 +90,7 @@
         <script src="{{ asset('js/tabel.js') }}"></script>           
     </div>
 </div>
-</div>
+</div> !-->
 
 <div class="datel-filter">
     <select id="datel-select" class="dropbtn-datel">
@@ -464,7 +495,7 @@
               borderWidth: 3,
               backgroundColor: gradientStroke1,
               fill: true,
-              data: [388, 218, 295, 195, 256, 179, 235, 26],
+              data: [388, 218, 295, 195, 256, 179, 235, 77],
               maxBarThickness: 6
 
             },

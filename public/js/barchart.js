@@ -1,10 +1,4 @@
-fetch('json/hsi2024.json')
-    .then((response) => response.json())
-    .then((data) => {
-        window.jumlahData = data;
-        createBarChart();
-    });
-
+// Fungsi untuk membuat Bar Chart
 function createBarChart() {
     const ctx = document.getElementById('barchart-jumlah').getContext('2d');
     const months = ["JANUARI", "FEBRUARI", "MARET", "APRIL", "MEI", "JUNI", "JULI", "AGUSTUS", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DESEMBER"];
@@ -96,3 +90,42 @@ function createBarChart() {
         }
     });
 }
+
+// Memuat data JSON awal dan membuat chart
+fetch('json/hsi2024.json')
+    .then((response) => response.json())
+    .then((data) => {
+        window.jumlahData = data;
+        createBarChart();
+    })
+    .catch((error) => console.error('Error fetching JSON:', error));
+
+// Menangani upload file JSON baru dan update chart
+document.getElementById('upload-json-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var formData = new FormData();
+    formData.append('jsonFile', document.getElementById('jsonFile').files[0]);
+
+    fetch('/upload-json', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        if (data.message.includes('berhasil')) {
+            // Muat ulang JSON baru dan refresh chart
+            fetch('json/hsi2024.json')
+                .then(response => response.json())
+                .then(data => {
+                    window.jumlahData = data;
+                    createBarChart(); // Panggil ulang fungsi untuk refresh chart
+                });
+        }
+    })
+    .catch(error => console.error('Error:', error));
+});
