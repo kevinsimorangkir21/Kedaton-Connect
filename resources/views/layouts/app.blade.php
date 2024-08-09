@@ -1,71 +1,56 @@
-<!--
-=========================================================
-* Soft UI Dashboard - v1.0.3
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
-
-@if (\Request::is('rtl'))
-  <html dir="rtl" lang="ar">
-@else
-  <html lang="en" >
-@endif
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  @if (env('IS_DEMO'))
-      <x-demo-metas></x-demo-metas>
-  @endif
-
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/ico" href="../assets/img/telkomakses.png">
-  <title>
-    AksesKu | Telkom Akses Kedaton
-  </title>
-  <!--     Fonts and icons     -->
+  <title>AksesKu | Telkom Akses Kedaton</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-
-  <!-- Nucleo Icons -->
   <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
-
-  <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
-
-  <!-- CSS Files -->
-  <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+  <link href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
   <link rel="stylesheet" href="{{ asset('css/dashboard1.css') }}">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css"/>
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.dataTables.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
 
-  <!-- DataTable js  -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"></script>
-  
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css"/>
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.dataTables.min.css"/>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
 
-    <!-- DataTable JS -->
-    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
-    <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
-
-
+  <!-- Preloader styles -->
+  <style>
+    #preloader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loader img {
+      width: 120px; /* Adjust the size of your logo */
+      height: auto;
+    }
+  </style>
 </head>
 
-<body class="g-sidenav-show  bg-gray-100 {{ (\Request::is('rtl') ? 'rtl' : (Request::is('virtual-reality') ? 'virtual-reality' : '')) }} ">
+<body class="g-sidenav-show bg-gray-100">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader">
+      <img src="../assets/img/telkomakses-logo.png" alt="Telkom Akses Logo" id="logo">
+    </div>
+  </div>
+
   @auth
     @yield('auth')
   @endauth
@@ -81,10 +66,10 @@
       <p class="m-0">{{ session('success')}}</p>
     </div>
   @endif
-    <!--   Core JS Files   -->
+
+  <!-- Core JS Files -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
-
   <script src="../assets/js/plugins/fullcalendar.min.js"></script>
   <script src="../assets/js/plugins/chartjs.min.js"></script>
   <script src="../assets/js/plugins/jquery.js"></script>
@@ -101,11 +86,41 @@
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
   </script>
-
-  <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
+
+  <script>
+    // GSAP animation for the logo
+    gsap.from("#logo", {
+      duration: 1.5,
+      scale: 0.5,
+      opacity: 0,
+      ease: "back.out(1.7)",
+      onComplete: function() {
+        // Fade out and hide preloader after animation completes
+        gsap.to("#preloader", {
+          duration: 1,
+          opacity: 0,
+          display: "none",
+          delay: 0.5 // Delay to make sure the animation is visible before hiding
+        });
+      }
+    });
+
+    // Optionally, you can hide the preloader if the page loads slowly
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var preloader = document.getElementById('preloader');
+        if (preloader) {
+          gsap.to(preloader, {
+            duration: 1,
+            opacity: 0,
+            display: "none"
+          });
+        }
+      }, 500); // Adjust delay as needed
+    });
+  </script>
 </body>
 
 </html>
