@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <main class="main-content  mt-0">
+  <main class="main-content mt-0">
     <section>
       <div class="page-header min-vh-75">
         <div class="container">
@@ -28,8 +28,11 @@
                       @enderror
                     </div>
                     <label>Password</label>
-                    <div class="mb-3">
+                    <div class="mb-3 position-relative">
                       <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="admin" aria-label="Password" aria-describedby="password-addon">
+                      <span class="password-toggle" onclick="togglePassword()">
+                        <i id="passwordIcon" class="fa fa-eye"></i>
+                      </span>
                       @error('password')
                         <p class="text-danger text-xs mt-2">{{ $message }}</p>
                       @enderror
@@ -99,13 +102,36 @@
 
       setTimeout(typeText, newTextDelay + 250);
     });
+
+    function togglePassword() {
+      const passwordField = document.getElementById('password');
+      const passwordIcon = document.getElementById('passwordIcon');
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        passwordIcon.classList.remove('fa-eye');
+        passwordIcon.classList.add('fa-eye-slash');
+      } else {
+        passwordField.type = 'password';
+        passwordIcon.classList.remove('fa-eye-slash');
+        passwordIcon.classList.add('fa-eye');
+      }
+    }
   </script>
 
   <!-- Tambahkan CSS untuk mencegah elemen bergerak -->
   <style>
     #animatedTextContainer {
-      height: 1.2em; /* Atur tinggi sesuai ukuran font */
+      height: 1.5em; /* Atur tinggi sesuai ukuran font */
       display: inline-block;
+      line-height: 1.5em; /* Sesuaikan ketinggian baris untuk kenyamanan baca */
+    }
+
+    .password-toggle {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
     }
   </style>
 

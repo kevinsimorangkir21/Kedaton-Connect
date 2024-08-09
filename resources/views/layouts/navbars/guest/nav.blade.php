@@ -27,6 +27,22 @@
             </a>
             </li>
         @endif
+        <!-- Links moved from Footer -->
+        <li class="nav-item">
+          <span class="nav-link">|</span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.telkom.co.id/sites" target="_blank">Telkom</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://telkomakses.co.id/" target="_blank">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.creative-tim.com/presentation" target="_blank">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.creative-tim.com/templates" target="_blank">Products</a>
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
