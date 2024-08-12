@@ -7,8 +7,9 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 my-3 {{ (Request::is('static-sign-up') ? 'w-100 shadow-none  navbar-transparent mt-4' : 'blur blur-rounded shadow py-2 start-0 end-0 mx4') }}">
   <div class="container-fluid {{ (Request::is('static-sign-up') ? 'container' : 'container-fluid') }}">
-    <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 {{ (Request::is('static-sign-up') ? 'text-white' : '') }}" href="{{ url('dashboard') }}">
-      Telkom Akses Kedaton Dashboard
+    <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 d-flex align-items-center {{ (Request::is('static-sign-up') ? 'text-white' : '') }}" href="{{ url('dashboard') }}">
+      <img src="../assets/img/telkom1.png" alt="Logo" class="me-2" style="height: 30px;">
+      Kedaton Connect
     </a>
     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon mt-2">
@@ -50,18 +51,12 @@
           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#developerModal">Developer</a>
         </li>
       </ul>
-      <!-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link me-2" href="{{ auth()->user() ? url('static-sign-up') : url('register') }}">
-            <i class="fas fa-user-plus opacity-6 me-1 {{ (Request::is('static-sign-up') ? '' : 'text-dark') }}"></i>
-            Sign Up
-          </a>
-        </li>
-      </ul> -->
     </div>
   </div>
 </nav>
 <!-- End Navbar -->
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="developerModal" tabindex="-1" aria-labelledby="developerModalLabel" aria-hidden="true">
