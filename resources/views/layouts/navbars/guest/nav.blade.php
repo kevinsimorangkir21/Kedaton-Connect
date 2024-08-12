@@ -39,13 +39,10 @@
           <span class="nav-link">|</span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.telkom.co.id/sites" target="_blank">Telkom</a>
+          <a class="nav-link" href="https://www.telkom.co.id/sites" target="_blank">Telkom Indonesia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://telkomakses.co.id/" target="_blank">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.creative-tim.com/presentation" target="_blank">Team</a>
+          <a class="nav-link" href="https://telkomakses.co.id/" target="_blank">Telkom Akses</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#developerModal">Developer</a>
