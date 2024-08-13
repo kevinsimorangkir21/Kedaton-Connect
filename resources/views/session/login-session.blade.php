@@ -59,7 +59,7 @@
           </div>
           <div class="col-md-6">
             <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
-              <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url('../assets/img/curved-images/gambar2.jpg')"></div>
+              <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" id="slideShow" style="background-image:url('../assets/img/curved-images/gambar1.jpg')"></div>
             </div>
           </div>
         </div>
@@ -101,6 +101,23 @@
     }
 
     setTimeout(typeText, newTextDelay + 250);
+
+    // Gambar slide otomatis
+    const images = [
+      "../assets/img/curved-images/gambar1.jpg",
+      "../assets/img/curved-images/gambar2.jpg",
+      "../assets/img/curved-images/gambar3.jpg"
+    ];
+    let slideIndex = 0;
+    const slideElement = document.getElementById("slideShow");
+    const slideInterval = 2000; // Interval slide 5 detik
+
+    function changeSlide() {
+      slideElement.style.backgroundImage = `url(${images[slideIndex]})`;
+      slideIndex = (slideIndex + 1) % images.length;
+    }
+
+    setInterval(changeSlide, slideInterval);
   });
 
   function togglePassword() {
@@ -131,9 +148,16 @@
 <!-- Tambahkan CSS untuk mencegah elemen bergerak -->
 <style>
   #animatedTextContainer {
-    height: 1.5em; /* Atur tinggi sesuai ukuran font */
+    height: 1.5em; /* Tinggi tetap sesuai ukuran font */
     display: inline-block;
-    line-height: 1.5em; /* Sesuaikan ketinggian baris untuk kenyamanan baca */
+    line-height: 1.5em; /* Sesuaikan ketinggian baris */
+    white-space: nowrap; /* Mencegah teks terpotong jika terlalu panjang */
+    overflow: hidden; /* Sembunyikan teks yang terlalu panjang */
+  }
+
+  #animatedText {
+    display: inline-block;
+    padding-right: 0.1em; /* Sedikit ruang untuk memastikan tidak ada penggeseran */
   }
 
   .password-toggle {
@@ -147,6 +171,7 @@
   .oblique-image {
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease-in-out;
   }
 </style>
 
