@@ -110,7 +110,7 @@
     ];
     let slideIndex = 0;
     const slideElement = document.getElementById("slideShow");
-    const slideInterval = 2000; // Interval slide 5 detik
+    const slideInterval = 5000; // Interval slide 5 detik
 
     function changeSlide() {
       slideElement.style.backgroundImage = `url(${images[slideIndex]})`;
