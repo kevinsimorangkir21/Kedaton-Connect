@@ -10,7 +10,7 @@
           <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
             <div class="card card-plain mt-8">
               <div class="card-header pb-0 text-left bg-transparent">
-                <h3 class="font-weight-bolder text-info text-gradient" id="animatedTextContainer">
+                <h3 class="font-weight-bolder text-info text-gradient bg" id="animatedTextContainer">
                   <span id="animatedText"></span>
                 </h3>
                 <p class="mb-0">Create a new account<br></p>
@@ -42,8 +42,9 @@
                     <label class="form-check-label" for="rememberMe">Remember me</label>
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Sign in</button>
+                    <button type="submit" class="btn bg-gradient-red w-100 mt-4 mb-0">Sign in</button>
                   </div>
+
                 </form>
               </div>
               <div class="card-footer text-center pt-0 px-lg-2 px-1">
@@ -157,7 +158,13 @@
 
   #animatedText {
     display: inline-block;
-    padding-right: 0.1em; /* Sedikit ruang untuk memastikan tidak ada penggeseran */
+    padding-right: 0.1em;
+    color:red; /* Sedikit ruang untuk memastikan tidak ada penggeseran */
+  }
+
+  .bg-gradient-red {
+    background: linear-gradient(310deg, #f44336, #e53935); /* Gradasi warna merah */
+    color: #fff;
   }
 
   .password-toggle {
