@@ -50,7 +50,7 @@
   <!-- Preloader -->
   <div id="preloader">
     <div class="loader">
-      <img src="../assets/img/telkomakses-logo.png" alt="Telkom Akses Logo" id="logo">
+      <img src="../assets/img/telkomputih.png" alt="Telkom Akses Logo" id="logo">
     </div>
   </div>
 

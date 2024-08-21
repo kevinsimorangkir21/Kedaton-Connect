@@ -12,7 +12,7 @@ fetch('json/hsi2024.json')
             lengthMenu: [[15, 20, 50, 100],[15, 20, 50, 100]],
             columns : [
                 { data: 'BULAN' },
-                { data: 'NAMA' },
+                { data: 'NAMA PELANGGAN' },
                 { data: 'STO' },
                 { data: 'KETERANGAN' },
                 { data: 'MITRA' },

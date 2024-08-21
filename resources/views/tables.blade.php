@@ -9,7 +9,7 @@
             <thead>
                 <tr>
                     <th>BULAN</th>
-                    <th>NAMA</th>
+                    <th>NAMA PELANGGAN</th>
                     <th>STO</th>
                     <th>KETERANGAN</th>
                     <th>MITRA</th>

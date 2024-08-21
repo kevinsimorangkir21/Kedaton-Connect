@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function createPieChart() {
     const ctx = document.getElementById('piechart-area').getContext('2d');
-    const areas = ["METRO", "INNER", "PRINGSEWU"];
+    const areas = ["METRO", "INNER", "PRINGSEWU", "UNIT", "KOTABUMI"];
     let areaCounts = {
         "METRO": 0,
         "INNER": 0,
-        "PRINGSEWU": 0
+        "PRINGSEWU": 0,
+        "UNIT": 0,
+        "KOTABUMI": 0
     };
 
     window.jumlahData.forEach(entry => {
@@ -32,14 +34,12 @@ function createPieChart() {
                 backgroundColor: [
                     '#00a9a5', // nila
                     '#003049', // biru
-                    '#d62828'  // Merah
+                    '#d62828', // merah
+                    '#f77f00', // oranye
+                    '#7a9d8f'  // hijau
                 ],
-                borderColor: [
-                    '#00a9a5', // nila
-                    '#003049', // biru 
-                    '#d62828'  // Merah
-                ],
-                borderWidth: 1
+                borderColor: '#fff', // Border putih
+                borderWidth: 2
             }]
         },
         options: {

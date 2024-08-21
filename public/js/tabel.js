@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 order: [[0, 'desc']], // Urutkan berdasarkan kolom 'id' secara descending
                 columns: [
                     { data: 'BULAN' },
-                    { data: 'NAMA' },
+                    { data: 'NAMA PELANGGAN' },
                     { data: 'STO' },
                     { data: 'KETERANGAN' },
                     { data: 'MITRA' },
