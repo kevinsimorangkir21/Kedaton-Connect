@@ -9,9 +9,10 @@
             <thead>
                 <tr>
                     <th>BULAN</th>
+                    <th>TGL BAGI WO</th>
                     <th>NAMA PELANGGAN</th>
                     <th>STO</th>
-                    <th>KETERANGAN</th>
+                    <th>STATUS</th>
                     <th>MITRA</th>
                     <th>AREA</th>
                 </tr>

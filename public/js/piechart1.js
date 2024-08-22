@@ -30,7 +30,7 @@ function createPieChart() {
 
     // Membuat pie chart dengan Chart.js
     new Chart(ctx, {
-        type: 'bar',
+        type: 'doughnut',
         data: {
             labels: areas,
             datasets: [{
