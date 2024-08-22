@@ -15,13 +15,16 @@ function csvToJson(csvText) {
     return result;
 }
 
-// Fungsi untuk memperbarui kartu skor
-function updateScoreCards(data, branch) {
-    // Filter data berdasarkan BRANCH jika ada yang dipilih
+// Fungsi untuk memperbarui kartu skor berdasarkan branch
+function updateBranchScoreCard(data, branch) {
     const filteredData = branch ? data.filter(item => item.BRANCH === branch) : data;
+    const branchWO = filteredData.reduce((sum, item) => sum + (parseInt(item['ALL WO']) || 0), 0);
+    document.getElementById('branch-wo').innerText = branchWO.toLocaleString('en-US');
+}
 
-    // Hitung total WO
-    const totalWO = filteredData.reduce((sum, item) => sum + (parseInt(item['ALL WO']) || 0), 0);
+// Fungsi untuk memperbarui kartu skor total WO
+function updateTotalScoreCard(data) {
+    const totalWO = data.reduce((sum, item) => sum + (parseInt(item['ALL WO']) || 0), 0);
     document.getElementById('total-wo').innerText = totalWO.toLocaleString('en-US');
 }
 
@@ -33,13 +36,16 @@ fetch('csv/dashboard.csv')
         window.woData = data;
 
         // Tampilkan total keseluruhan saat pertama kali memuat data
-        updateScoreCards(data, null);
+        updateTotalScoreCard(data);
 
         // Tangani seleksi BRANCH
         document.getElementById('branch-select').addEventListener('change', event => {
             const branch = event.target.value;
-            updateScoreCards(window.woData, branch);
+            updateBranchScoreCard(window.woData, branch);
         });
+
+        // Tampilkan total WO per branch saat pertama kali memuat data
+        updateBranchScoreCard(data, document.getElementById('branch-select').value);
     })
     .catch(error => {
         console.error('Error fetching the WO data:', error);

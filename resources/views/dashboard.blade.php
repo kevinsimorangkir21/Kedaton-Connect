@@ -96,30 +96,29 @@
   </div>
 </div>
 
+<!--
+<div class="row mt-4">
+    <div class="datel-filter">
+        <select id="branch-select" class="form-control">
+            <option value="">Semua Branch</option>
+            <option value="INNER LAMPUNG">INNER</option>
+            <option value="KOTABUMI">KOTABUMI</option>
+            <option value="METRO">METRO</option>
+            <option value="PRINGSEWU">PRINGSEWU</option>
+            <option value="UNIT">UNIT</option>
+        </select>
+    </div>
+</div>
 
 <div class="row mt-4">
-<div class="datel-filter">
-    <select id="branch-select" class="form-control">
-    <option value="">Semua Branch</option>
-    <option value="INNER LAMPUNG">INNER</option>
-    <option value="KOTABUMI">KOTABUMI</option>
-    <option value="METRO">METRO</option>
-    <option value="PRINGSEWU">PRINGSEWU</option>
-    <option value="UNIT">UNIT</option>
-    </select>
-</div>
-</div>
-
-<!-- Scorecard -->
-  <div class="row mt-4">
-  <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
                 <div class="row">
                     <div class="col-8">
                         <div class="numbers">
                             <p class="text-sm mb-0 text-capitalize font-weight-bold">WO per Branch</p>
-                            <h5 class="font-weight-bolder mb-0" id="total-wo">0</h5>
+                            <h5 class="font-weight-bolder mb-0" id="branch-wo">0</h5>
                         </div>
                     </div>
                     <div class="col-4 text-end">
@@ -133,7 +132,6 @@
     </div>
     <script src="js/scoreCardFilter.js"></script>
 
-    <!-- Scorecard Berdasarkan BRANCH -->
     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
@@ -154,7 +152,8 @@
         </div>
     </div>
     <script src="js/scoreCardFilter.js"></script>
-    
+</div>
+
     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
       <div class="card">
         <div class="card-body p-3">
@@ -199,7 +198,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>  !-->
+
 
   <div class="row mt-4">
     <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
@@ -222,6 +222,61 @@
             </div>
         </div>
     </div>
+
+    <!-- Kolom utama untuk menampung kedua scorecards secara vertikal -->
+    <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
+        <!-- Scorecard WO per Branch -->
+        <div class="card mb-4">
+            <div class="datel-filter p-3">
+                <select id="branch-select" class="form-control">
+                    <option value="INNER LAMPUNG">INNER</option>
+                    <option value="KOTABUMI">KOTABUMI</option>
+                    <option value="METRO">METRO</option>
+                    <option value="PRINGSEWU">PRINGSEWU</option>
+                    <option value="UNIT">UNIT</option>
+                </select>
+            </div>
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="numbers">
+                            <p class="text-sm mb-0 text-capitalize font-weight-bold">WO per Branch</p>
+                            <h5 class="font-weight-bolder mb-0" id="branch-wo">0</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                            <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scorecard Total WO -->
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="numbers">
+                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Total WO</p>
+                            <h5 class="font-weight-bolder mb-0" id="total-wo">0</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                            <i class="ni ni-world-2 text-lg opacity-10" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/scoreCardFilter.js"></script>
+</div>
+
+<!-- Chart WO HI Bawah -->
+    <div class="row mt-4">
     <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
@@ -232,8 +287,6 @@
             </div>
         </div>
     </div>
-    
-    <div class="row mt-4">
     <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
