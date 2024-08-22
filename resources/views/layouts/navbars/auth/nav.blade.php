@@ -23,7 +23,7 @@
             <ul class="navbar-nav justify-content-end">
                 <li class="nav-item d-flex align-items-center">
                     <a href="{{ url('/logout')}}" class="nav-link text-body font-weight-bold px-0">
-                        <i class="fa-solid fa-door-open"></i>
+                        <i class="fa-solid fa-door-closed"></i>
                         <span class="d-sm-inline d-none">Sign Out</span>
                     </a>
                 </li>
