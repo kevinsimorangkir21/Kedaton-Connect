@@ -10,6 +10,7 @@ use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\AreaChartController;
 use App\Http\Controllers\ChartController;
 use App\Http\Controllers\hsi2023Controller;
+use App\Http\Controllers\CsvUploadController;
 use App\Http\Controllers\JsonUploadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
@@ -71,6 +72,8 @@ Route::group(['middleware' => 'auth', 'cekRole:admin,viewer,helpdesk'], function
 	Route::post('/insertuser', [DataUserController::class, 'insertuser'])->name('insertuser');
 	Route::delete('/deleteuser/{id}', [DataUserController::class, 'deleteuser'])->name('deleteuser');
 	Route::get('/user-teams', [DataUserController::class, 'getTeams'])->name('user.teams');
+	Route::post('/upload-csv', [CsvUploadController::class, 'upload'])->name('upload.csv');
+	Route::post('/upload-csv-dashboard', [CsvUploadController::class, 'uploadDashboard'])->name('upload.dashboard.csv');
 	Route::post('/upload-json', [JsonUploadController::class, 'upload'])->name('upload.json');
 	Route::post('/upload-dashboard', [JsonUploadController::class, 'uploadDashboard']);
 

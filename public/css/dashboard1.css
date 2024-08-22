@@ -35,7 +35,6 @@
 }
 
 
-
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -71,6 +70,7 @@ table th {
     position: sticky;
     top : 0;
     background-color:#4B93FF;
+    color: rgb(255, 255, 255);
     font-size: 15px;
     overflow: hidden;
     word-wrap:break-word;    

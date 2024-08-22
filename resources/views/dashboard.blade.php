@@ -3,36 +3,70 @@
 @section('content')
     
   <!-- Form untuk upload file JSON -->
-<div class="grid-container2">
+<!-- <div class="grid-container2">
   <div class="card">
     <div class="card-body p-3">
-      <h4>Update Data 2024</h4>
+      <h4>Update Data HSI 2024</h4>
       <form id="upload-json-form" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
           <label for="jsonFile" class="form-label"></label>
           <input type="file" id="jsonFile" name="jsonFile" accept=".json" class="form-control-file">
         </div>
-    <button type="submit" class="btn btn-primary">Upload Data 2024</button>
+    <button type="submit" class="btn btn-primary">Upload Data HSI 2024</button>
       </form>
     </div>
-  </div>
-
-  <div class="card">
+  </div> 
+  
+    <div class="card">
     <div class="card-body p-3">
-      <h4>Update Dashboard ALL</h4>
+      <h4>Update Dashboard TIF</h4>
       <form id="upload-dashboard-form" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
           <label for="jsonFile" class="form-label"></label>
           <input type="file" id="dashboardFile" name="dashboardFile" accept=".json">
         </div>
-      <button type="submit" class="btn btn-primary">Upload Dashboard ALL</button>
+      <button type="submit" class="btn btn-primary">Upload Dashboard TIF</button>
+      </form>
+    </div>
+  </div>
+</div>
+  !-->
+
+  <!-- Form untuk upload file CSV -->
+  <div class="grid-container2">
+  <div class="card">
+    <div class="card-body p-3">
+      <h4>Update Data HSI 2024</h4>
+      <form action="{{ route('upload.csv') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+          <label for="csvFile" class="form-label">hsi2024.csv:</label>
+          <input type="file" id="csvFile" name="csvFile" accept=".csv" class="form-control-file" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload Data HSI 2024</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body p-3">
+      <h4>Update Dashboard TIF</h4>
+      <form action="{{ route('upload.dashboard.csv') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+          <label for="dashboardFile" class="form-label">dashboard.csv:</label>
+          <input type="file" id="dashboardFile" name="dashboardFile" accept=".csv" class="form-control-file" required>
+        </div>
+      <button type="submit" class="btn btn-primary">Upload Dashboard TIF</button>
       </form>
     </div>
   </div>
 </div>
 
+
+<!-- Chart HSI -->
 <div class="grid-container1">
   <div class="card">
     <div class="card-body p-3">
@@ -44,7 +78,7 @@
         <div class="chart-wrapper">
         <canvas id="barchart-jumlah" width="400" height="300"></canvas>
         </div>
-    <script src="js/barchart.js" type="text/javascript"></script>
+    <script src="js/barchart1.js" type="text/javascript"></script>
       </div>
     </div>
   </div>
@@ -92,16 +126,17 @@
 </div>
 </div> !-->
 
-<div class="datel-filter">
+ <!-- <div class="datel-filter">
     <select id="datel-select" class="dropbtn-datel">
         <option value="">All DATEL</option>
         <option value="METRO AREA">METRO</option>
         <option value="INNER AREA">INNER AREA</option>
         <option value="PRINGSEWU AREA">PRINGSEWU</option>
     </select>
-</div>
+</div> !-->
 </div>
 
+<!-- Scorecard -->
   <div class="row mt-4">
   <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
@@ -125,27 +160,47 @@
     <script src="js/scoreCardFilter.js"></script>
 
     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-8">
-              <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Inner</p>
-                <h5 class="font-weight-bolder mb-0">
-                  +8
-                  <span class="text-success text-sm font-weight-bolder">+3%</span>
-                </h5>
-              </div>
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="numbers">
+                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Total WO</p>
+                            <h5 class="font-weight-bolder mb-0" id="total-wo">0</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                            <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
+    <script src="js/scoreCardFilter.js"></script>
+
+    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="numbers">
+                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Kendala PT2NS/PT3</p>
+                            <h5 class="font-weight-bolder mb-0" id="kendala-pt2pt3">0</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                            <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/scoreCardFilter.js"></script>
+    
     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
       <div class="card">
         <div class="card-body p-3">
@@ -174,7 +229,7 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Metro</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">RETI/LOSS</p>
                 <h5 class="font-weight-bolder mb-0">
                   +11
                   <span class="text-success text-sm font-weight-bolder">+5%</span>
@@ -193,12 +248,12 @@
   </div>
 
   <div class="row mt-4">
-  <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
+    <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
-                <h4>WO HI INNER</h4>
+                <h4>WO HI INNER LAMPUNG</h4>
                 <div class="pietotal">
-                    <canvas id="piechart-inner-area" width="200" height="200"></canvas>
+                    <canvas id="piechart-inner-lampung" width="250" height="250"></canvas>
                 </div>
             </div>
         </div>
@@ -206,9 +261,9 @@
     <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
-                <h4>WO HI PRINGSEWU</h4>
+                <h4>WO HI KOTABUMI</h4>
                 <div class="pietotal">
-                    <canvas id="piechart-pringsewu-area" width="200" height="200"></canvas>
+                    <canvas id="piechart-kotabumi" width="250" height="250"></canvas>
                 </div>
             </div>
         </div>
@@ -218,16 +273,39 @@
             <div class="card-body p-3">
                 <h4>WO HI METRO</h4>
                 <div class="pietotal">
-                    <canvas id="piechart-metro-area" width="200" height="200"></canvas>
+                    <canvas id="piechart-metro" width="250" height="250"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+    <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <h4>WO HI PRINGSEWU</h4>
+                <div class="pietotal">
+                    <canvas id="piechart-pringsewu" width="250" height="250"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <h4>WO HI UNIT</h4>
+                <div class="pietotal">
+                    <canvas id="piechart-unit" width="250" height="250"></canvas>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
 <script src="js/innerpie.js"></script>
 
 
-  <div class="row mt-4">
+  <!-- <div class="row mt-4">
     <div class="col-lg-5 mb-lg-0 mb-4">
       <div class="card z-index-2">
         <div class="card-body p-3">
@@ -236,7 +314,7 @@
               <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
             </div>
           </div>
-          <!-- <h6 class="ms-2 mt-4 mb-0"> Active Users </h6>
+          <h6 class="ms-2 mt-4 mb-0"> Active Users </h6>
           <p class="text-sm ms-2"> (<span class="font-weight-bolder">+23%</span>) than last week </p>
           <div class="container border-radius-lg">
             <div class="row">
@@ -340,7 +418,7 @@
                 </div>
               </div>
             </div>
-          </div> !-->
+          </div>
         </div>
       </div>
     </div>
@@ -360,42 +438,8 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-        <h2>HSI 2023 Tabel</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Bulan</th>
-                    <th>Tgl Bagi WO</th>
-                    <th>STO</th>
-                    <th>Status</th>
-                    <th>Keterangan</th>
-                    <th>Mitra</th>
-                    <th>Segmen</th>
-                </tr>
-            </thead>
-            <tbody>
-            @forelse ($hsi2023s as $hsi2023)
-                    <tr>
-                        <td>{{ $hsi2023->BULAN }}</td>
-                        <td>{{ $hsi2023->{'TGL BAGI WO'} }}</td>
-                        <td>{{ $hsi2023->STO }}</td>
-                        <td>{{ $hsi2023->STATUS }}</td>
-                        <td>{{ $hsi2023->KETERANGAN }}</td>
-                        <td>{{ $hsi2023->MITRA }}</td>
-                        <td>{{ $hsi2023->SEGMEN }}</td>
-                    </tr>
-                @empty
-                    <tr>
-                        <td colspan="7">No data available</td>
-                    </tr>
-                @endforelse
-            </tbody>
-        </table>
-    </div>
+  </div> !-->
 
-    
 
 @endsection
 @push('dashboard')
