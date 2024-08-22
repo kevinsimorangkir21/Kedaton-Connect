@@ -2,9 +2,10 @@
 
 @section('content')
 
-
 <div class="tabel">
     <div class="tabelrec">
+        <h4 style="display: inline-block; margin-right: 20px;">Data HSI</h4> <!-- Tambahkan baris ini -->
+        <button class="btn btn-primary" style="float: right;">Edit</button> <!-- Contoh tombol edit -->
         <table id="data-tabel" class="display" style="width:100%">
             <thead>
                 <tr>
@@ -21,6 +22,6 @@
     </div>
 </div>
 </div>
-  </main>
+</main>
   
-  @endsection
+@endsection
