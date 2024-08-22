@@ -86,7 +86,7 @@
   <div class="card">
     <div class="card-body p-3">
       <div class="piechart-container">
-      <h4>Data 3 Area 2024</h4>
+      <h4>Data 5 Area 2024</h4>
       <div class="chart-wrapper">
         <canvas id="piechart-area" width="280" height="280"></canvas>
       </div>
@@ -98,42 +98,16 @@
 
 
 <div class="row mt-4">
-<!-- <div class="grid-container">
-<div class="piechart2">
-      <h4>Jumlah Area 2024</h4>
-      <div class= "pietotal" >
-         <canvas id="piechart-area" width="260" height="260"></canvas>
-      </div>
-      <script src="js/piechart.js"></script> 
-</div>
-
-<div class="tabel">
-    <div class="tabelrec">
-        <table id="data-tabel" class="display" style="width:100%">
-            <thead>
-                <tr>
-                    <th>BULAN</th>
-                    <th>NAMA</th>
-                    <th>STO</th>
-                    <th>KETERANGAN</th>
-                    <th>MITRA</th>
-                    <th>AREA</th>
-                </tr>
-            </thead>
-        </table>
-        <script src="{{ asset('js/tabel.js') }}"></script>           
-    </div>
-</div>
-</div> !-->
-
- <!-- <div class="datel-filter">
-    <select id="datel-select" class="dropbtn-datel">
-        <option value="">All DATEL</option>
-        <option value="METRO AREA">METRO</option>
-        <option value="INNER AREA">INNER AREA</option>
-        <option value="PRINGSEWU AREA">PRINGSEWU</option>
+<div class="datel-filter">
+    <select id="branch-select" class="form-control">
+    <option value="">Semua Branch</option>
+    <option value="INNER LAMPUNG">INNER</option>
+    <option value="KOTABUMI">KOTABUMI</option>
+    <option value="METRO">METRO</option>
+    <option value="PRINGSEWU">PRINGSEWU</option>
+    <option value="UNIT">UNIT</option>
     </select>
-</div> !-->
+</div>
 </div>
 
 <!-- Scorecard -->
@@ -144,7 +118,7 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="numbers">
-                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Total WO</p>
+                            <p class="text-sm mb-0 text-capitalize font-weight-bold">WO per Branch</p>
                             <h5 class="font-weight-bolder mb-0" id="total-wo">0</h5>
                         </div>
                     </div>
@@ -159,6 +133,7 @@
     </div>
     <script src="js/scoreCardFilter.js"></script>
 
+    <!-- Scorecard Berdasarkan BRANCH -->
     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
@@ -167,27 +142,6 @@
                         <div class="numbers">
                             <p class="text-sm mb-0 text-capitalize font-weight-bold">Total WO</p>
                             <h5 class="font-weight-bolder mb-0" id="total-wo">0</h5>
-                        </div>
-                    </div>
-                    <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                            <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="js/scoreCardFilter.js"></script>
-
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-            <div class="card-body p-3">
-                <div class="row">
-                    <div class="col-8">
-                        <div class="numbers">
-                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Kendala PT2NS/PT3</p>
-                            <h5 class="font-weight-bolder mb-0" id="kendala-pt2pt3">0</h5>
                         </div>
                     </div>
                     <div class="col-4 text-end">
@@ -207,7 +161,7 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Pringsewu</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">WO METRO</p>
                 <h5 class="font-weight-bolder mb-0">
                   +2
                   <span class="text-danger text-sm font-weight-bolder">-2%</span>
