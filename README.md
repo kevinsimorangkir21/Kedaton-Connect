@@ -138,13 +138,13 @@ php artisan serve
 
 ## **UML Diagram**
 
-### The following is the UML diagram in this LOST game which has been arranged in a perfect structure according to the plot
+### The following is a UML diagram in the Kedaton Connect system which has been arranged in a perfect structure according to the storyline
 
 <img src="#" />
 
 ## **Screenshots**
 
-### The following is the appearance of the game in this LOST game which has been arranged with a perfect structure according to the plot
+### The following is a display of the Kedaton Connect system which has been arranged with a perfect structure according to the storyline
 
 <img src="#" />
 
