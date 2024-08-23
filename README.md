@@ -85,7 +85,7 @@ At this stage is the installation stage of this project with the available steps
 <li> Run GitBash and <i>clone</i> this GitHub repository</li>
 
 ```bash
-https://github.com/kevinsimorangkir21/Sistem-Informasi-Dusun-SID-3B.git
+https://github.com/kevinsimorangkir21/TelkomAkses-Dash.git
 ```
 
 <li> Open Visual Studio Code / Other Code Editors </li>
