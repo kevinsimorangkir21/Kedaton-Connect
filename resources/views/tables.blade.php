@@ -11,7 +11,7 @@
                 <tr>
                     <th>BULAN</th>
                     <th>TGL BAGI WO</th>
-                    <th>NAMA PELANGGAN</th>
+                    <th>NOMOR SC</th>
                     <th>STO</th>
                     <th>STATUS</th>
                     <th>MITRA</th>
