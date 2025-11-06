@@ -6,6 +6,7 @@
 [![Library](https://img.shields.io/badge/pygame-orange)](#)
 [![Github Commit](https://img.shields.io/github/commit-activity/m/kevinsimorangkir21/Tugas-Besar-PBO)](#)
 [![Github Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg)](#)
+
 </div>
 
 ## **Table Of Contents**
@@ -16,7 +17,7 @@
 
 [Member Of Duo K](#member-of-duo-K)
 
-[Role & Position Member Of Duo K](#role--position-member-of-chuakz-team)
+[Role &amp; Position Member Of Duo K](#role--position-member-of-chuakz-team)
 
 [Installation Steps](#instalation-steps)
 
@@ -32,23 +33,23 @@ Kedaton Connect is a system that can analyze Indibiz customer data with the aim 
 
 ## **Member Of Duo K**
 
-|  [<img src="public/assets/img/kevin.png" width="100px;"/><br /><sub><b>Kevin Simorangkir</b></sub>](https://github.com/kevinsimorangkir21)<br /> 121140150 <br /> | [<img src="public/assets/img/krisna.png" width="100px;"/><br /><sub><b>Ignatius Krisna</b></sub>](https://github.com/inExcelsis1710)<br />121140037 <br /> | 
-|--|--|
+| [`<img src="public/assets/img/kevin.png" width="100px;"/>`<br />`<sub><b>`Kevin Simorangkir`</b></sub>`](https://github.com/kevinsimorangkir21)<br /> 121140150  | [`<img src="public/assets/img/krisna.png" width="100px;"/>`<br />`<sub><b>`Ignatius Krisna`</b></sub>`](https://github.com/inExcelsis1710)<br />121140037  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## **Role & Position Member Of Duo K**
 
 <div align="center">
 
-| Name | Division
-| :---: | :---: |
-| Kevin Simorangkir     | BGES |
-| Ignatius Krisna       | MBB |
+|       Name       | Division |
+| :---------------: | :------: |
+| Kevin Simorangkir |   BGES   |
+|  Ignatius Krisna  |   MBB   |
 
 </div>
 
 ## **Instalation Steps**
 
-There are 2 different installation stages, namely <b> Pre Install</b> and <b> Intra Install </b>.
+There are 2 different installation stages, namely `<b>` Pre Install`</b>` and `<b>` Intra Install `</b>`.
 
 ### **Pre-Install**
 
