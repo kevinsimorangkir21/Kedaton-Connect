@@ -1,7 +1,6 @@
 <div align="center">
 <img src="public/assets/img/cover.png" width="100%" />
-<h1> Kedaton Connect | <b>Created by : Duo K</b></h1>
-<h2> Version : 1.0 </h2>
+<h1> Kedaton Connect </h1>
 
 [![Library](https://img.shields.io/badge/pygame-orange)](#)
 [![Github Commit](https://img.shields.io/github/commit-activity/m/kevinsimorangkir21/Tugas-Besar-PBO)](#)
@@ -27,9 +26,11 @@
 
 [Video Demo System](#video-demo-game-lost)
 
-## **Introduction System**
+## **Introduction System / Perkenalan Sistem**
 
-Kedaton Connect is a system that can analyze Indibiz customer data with the aim of obtaining accurate and detailed data so that the data can be estimated in the future for the company. This system is also integrated with several data, making it easier to use a system. This system also consists of several different roles and access rights with the aim of good and structured use.
+(ENG) Kedaton Connect is a system that can analyze Indibiz customer data with the aim of obtaining accurate and detailed data so that the data can be estimated in the future for the company. This system is also integrated with several data, making it easier to use a system. This system also consists of several different roles and access rights with the aim of good and structured use.
+
+(IDN) Kedaton Connect adalah sebuah sistem yang dapat menganalisis data pelanggan Indibiz dengan tujuan untuk memperoleh data yang akurat dan terperinci sehingga data tersebut dapat di perkirakan di masa yang akan datang bagi perusahaan. Sistem ini juga terintegrasi dengan beberapa data, sehingga memudahkan dalam penggunaan sebuah sistem. Sistem ini juga terdiri dari beberapa peran dan hak akses yang berbeda dengan tujuan penggunaan yang baik dan terstruktur.
 
 ## **Member Of Duo K**
 
