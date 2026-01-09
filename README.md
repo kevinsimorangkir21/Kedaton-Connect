@@ -37,10 +37,10 @@ Kedaton Connect is a system that can analyze Indibiz customer data with the aim 
 
 There are 2 members who make up Duo K with different divisions as follows:
 
-|       Name       | Initial Name | Division | Major |
-| :---------------: | :------: | :----: | :----: |
-| Kevin Simorangkir |   KS   | BGESS | Informatics Engineering |
-|  Ignatius Krisna  |   IK   | MBB | Informatics Engineering |
+|       Name       | Initial Name | Division | Major | Role |
+| :---------------: | :------: | :----: | :----: | :-----------------------: |
+| Kevin Simorangkir |   KS   | BGESS | Informatics Engineering | Backend Developer |
+|  Ignatius Krisna  |   IK   | MBB | Informatics Engineering | Frontend Developer |
 
 </div>
 
