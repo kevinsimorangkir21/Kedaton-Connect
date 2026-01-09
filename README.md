@@ -2,29 +2,27 @@
 <img src="public/assets/img/cover.png" width="100%" />
 <h1> Kedaton Connect </h1>
 
-[![Library](https://img.shields.io/badge/pygame-orange)](#)
-[![Github Commit](https://img.shields.io/github/commit-activity/m/kevinsimorangkir21/Tugas-Besar-PBO)](#)
-[![Github Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg)](#)
+[![Library](https://img.shields.io/badge/Laravel-10.x-red)](#)
+[![Github Commit](https://img.shields.io/github/commit-activity/m/kevinsimorangkir21/Kedaton-Connect)](#)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Github Contributors](https://img.shields.io/badge/all_contributors-2-red.svg)](#)
 
 </div>
 
 ## **Table Of Contents**
 
-[Contributing](#member-of-duo-K)
-
-[Introduction System](#introduction-system)
-
-[Member Of Duo K](#member-of-duo-K)
-
-[Role &amp; Position Member Of Duo K](#role--position-member-of-chuakz-team)
-
-[Installation Steps](#instalation-steps)
-
-[UML Diagram](#uml-diagram)
-
-[Screenshot System](#screenshots)
-
-[Video Demo System](#video-demo-game-lost)
+- [**Table Of Contents**](#table-of-contents)
+- [**Introduction System / Perkenalan Sistem**](#introduction-system--perkenalan-sistem)
+- [**Member Of Duo K**](#member-of-duo-k)
+- [**Role \& Position Member Of Duo K**](#role--position-member-of-duo-k)
+- [**Instalation Steps**](#instalation-steps)
+  - [**Pre-Install**](#pre-install)
+  - [**Intra-Install**](#intra-install)
+- [**UML Diagram**](#uml-diagram)
+  - [The following is a UML diagram in the Kedaton Connect system which has been arranged in a perfect structure according to the storyline](#the-following-is-a-uml-diagram-in-the-kedaton-connect-system-which-has-been-arranged-in-a-perfect-structure-according-to-the-storyline)
+- [**Screenshots**](#screenshots)
+  - [The following is a display of the Kedaton Connect system which has been arranged with a perfect structure according to the storyline](#the-following-is-a-display-of-the-kedaton-connect-system-which-has-been-arranged-with-a-perfect-structure-according-to-the-storyline)
+- [**Video Demo System**](#video-demo-system)
 
 ## **Introduction System / Perkenalan Sistem**
 
