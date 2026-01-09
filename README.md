@@ -33,9 +33,9 @@ Kedaton Connect is a system that can analyze Indibiz customer data with the aim 
 
 ## **Role & Position Member Of Duo K**
 
-<div align="center">
-
 There are 2 members who make up Duo K with different divisions as follows:
+
+<div align="center">
 
 |       Name       | Initial Name | Division | Major | Role |
 | :---------------: | :------: | :----: | :----: | :-----------------------: |
