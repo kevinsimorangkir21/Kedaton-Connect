@@ -19,9 +19,7 @@
   - [**Pre-Install**](#pre-install)
   - [**Intra-Install**](#intra-install)
 - [**UML Diagram**](#uml-diagram)
-  - [The following is a UML diagram in the Kedaton Connect system which has been arranged in a perfect structure according to the storyline](#the-following-is-a-uml-diagram-in-the-kedaton-connect-system-which-has-been-arranged-in-a-perfect-structure-according-to-the-storyline)
 - [**Screenshots**](#screenshots)
-  - [The following is a display of the Kedaton Connect system which has been arranged with a perfect structure according to the storyline](#the-following-is-a-display-of-the-kedaton-connect-system-which-has-been-arranged-with-a-perfect-structure-according-to-the-storyline)
 - [**Video Demo System**](#video-demo-system)
 
 ## **Introduction System / Perkenalan Sistem**
@@ -138,13 +136,12 @@ php artisan serve
 
 ## **UML Diagram**
 
-### The following is a UML diagram in the Kedaton Connect system which has been arranged in a perfect structure according to the storyline
+The following is a UML diagram in the Kedaton Connect system which has been arranged in a perfect structure according to the storyline
 
 <img src="#" />
 
 ## **Screenshots**
 
-### The following is a display of the Kedaton Connect system which has been arranged with a perfect structure according to the storyline
 
 <img src="#" />
 
