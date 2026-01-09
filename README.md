@@ -12,7 +12,7 @@
 ## **Table Of Contents**
 
 - [**Table Of Contents**](#table-of-contents)
-- [**Introduction System / Perkenalan Sistem**](#introduction-system--perkenalan-sistem)
+- [**Introduction System**](#introduction-system)
 - [**Member Of Duo K**](#member-of-duo-k)
 - [**Role \& Position Member Of Duo K**](#role--position-member-of-duo-k)
 - [**Instalation Steps**](#instalation-steps)
@@ -22,7 +22,7 @@
 - [**Screenshots**](#screenshots)
 - [**Video Demo System**](#video-demo-system)
 
-## **Introduction System / Perkenalan Sistem**
+## **Introduction System**
 
 Kedaton Connect is a system that can analyze Indibiz customer data with the aim of obtaining accurate and detailed data so that the data can be estimated in the future for the company. This system is also integrated with several data, making it easier to use a system. This system also consists of several different roles and access rights with the aim of good and structured use.
 
@@ -35,10 +35,12 @@ Kedaton Connect is a system that can analyze Indibiz customer data with the aim 
 
 <div align="center">
 
-|       Name       | Division |
-| :---------------: | :------: |
-| Kevin Simorangkir |   BGES   |
-|  Ignatius Krisna  |   MBB   |
+There are 2 members who make up Duo K with different divisions as follows:
+
+|       Name       | Initial Name | Division | Major |
+| :---------------: | :------: | :----: | :----: |
+| Kevin Simorangkir |   KS   | BGESS | Informatics Engineering |
+|  Ignatius Krisna  |   IK   | MBB | Informatics Engineering |
 
 </div>
 
