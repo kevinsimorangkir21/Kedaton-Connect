@@ -30,8 +30,8 @@
 
 ## **Member Of Duo K**
 
-| <a href="https://github.com/kevinsimorangkir21"><img src="public/assets/img/KVNS.png" width="100px"/> </a> <sub><b>Kevin Simorangkir</b></sub> 121140150 | <a href="https://github.com/inExcelsis1710"><img src="public/assets/img/IKIP.png" width="100px"/>  </a> <sub><b> Ignatius Krisna</b></sub> 121140037 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<img src="public/assets/img/Kevins.png" width="100px"/><br /><sub><b>Kevin Simorangkir</b></sub>](https://github.com/kevinsimorangkir21)<br />121140150 | [<img src="public/assets/img/IKIP.png" width="100px"/><br /><sub><b>Ignatius Krisna</b></sub>](https://github.com/inExcelsis1710)<br />121140037 |
+|--|--|
 
 ## **Role & Position Member Of Duo K**
 
