@@ -46,35 +46,22 @@ There are 2 members who make up Duo K with different divisions as follows:
 
 ## **Instalation Steps**
 
-There are 2 different installation stages, namely `<b>` Pre Install `</b>` and `<b>` Intra Install `</b>`.
+There are two main stages in installing this project. The following are the two stages:
 
 ### **Pre-Install**
 
-At this stage is the stage of preparing several tools, especially frameworks and tools that will later be needed for this project. The following is needed for this project:
+At this stage is the preparation stage before installing this project with the available requirements. Here are the requirements that must be met:
 
-<li> Composer :</li>
+<div align="center">
 
-```bash
-https://getcomposer.org/download/
-```
+|   Requirement   | Version | Download Link |
+| :-------------: | :-----: | :-------------: |
+|     Composer    |  2.x.x  |      [Link](https://getcomposer.org/download/)      | |
+|    Laravel 5    |  10.x.x |      [Link](https://laravel.com/docs/10.x)      | |
+|      XAMPP      |  8.x.x  |      [Link](https://www.apachefriends.org/download.html)      | | |
+|    Git Bash     |  2.x.x  |      [Link](https://git-scm.com/downloads)      | |
 
-<li> Laravel 5 :</li>
-
-```bash
-https://laravel.com/docs/10.x
-```
-
-<li> XAMPP :</li>
-
-```bash
-https://www.apachefriends.org/download.html
-```
-
-<li> Git Bash :</li>
-
-```bash
-https://git-scm.com/downloads
-```
+</div>
 
 ### **Intra-Install**
 
