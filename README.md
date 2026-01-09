@@ -24,9 +24,7 @@
 
 ## **Introduction System / Perkenalan Sistem**
 
-(ENG) Kedaton Connect is a system that can analyze Indibiz customer data with the aim of obtaining accurate and detailed data so that the data can be estimated in the future for the company. This system is also integrated with several data, making it easier to use a system. This system also consists of several different roles and access rights with the aim of good and structured use.
-
-(IDN) Kedaton Connect adalah sebuah sistem yang dapat menganalisis data pelanggan Indibiz dengan tujuan untuk memperoleh data yang akurat dan terperinci sehingga data tersebut dapat di perkirakan di masa yang akan datang bagi perusahaan. Sistem ini juga terintegrasi dengan beberapa data, sehingga memudahkan dalam penggunaan sebuah sistem. Sistem ini juga terdiri dari beberapa peran dan hak akses yang berbeda dengan tujuan penggunaan yang baik dan terstruktur.
+Kedaton Connect is a system that can analyze Indibiz customer data with the aim of obtaining accurate and detailed data so that the data can be estimated in the future for the company. This system is also integrated with several data, making it easier to use a system. This system also consists of several different roles and access rights with the aim of good and structured use.
 
 ## **Member Of Duo K**
 
